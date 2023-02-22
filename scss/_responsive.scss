@@ -1,0 +1,13 @@
+/*----------------------------------------*/
+/*  Responsive Css
+/*----------------------------------------*/
+@media #{$desktop-device}{
+    
+}
+@media #{$small-mobile}{
+    .sub-header {
+        .time-column {
+            display: none;
+        }
+    }   
+}

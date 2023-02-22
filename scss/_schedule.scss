@@ -1,0 +1,35 @@
+/*----------------------------------------*/
+/*  Schedule CSS
+/*----------------------------------------*/
+.schedule-wrap {
+    background-color: $white;
+    padding: 30px;
+    border-radius: 10px;
+    ul {
+        padding: 0;
+        margin: 0;
+        li {
+            list-style: none;
+            position: relative;
+            display: flex;
+            text-align: left;
+            padding: 5px 0;
+            font-size: 0.85rem;
+            font-weight: 500;
+            &:before {
+                content: "";
+                background: url(../img/icon/check.png) no-repeat;
+                background-size: cover;
+                width: 18px;
+                height: 18px;
+                display: block;
+                flex: 18px 0 0;
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+
+  
+

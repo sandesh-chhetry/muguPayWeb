@@ -1,0 +1,231 @@
+/*----------------------------------------*/
+
+
+/*  Slider CSS
+/*----------------------------------------*/
+
+.hero-section {
+    padding: 0;
+    background: $secondary;
+    background: linear-gradient(24deg, $secondary 57%, rgba(215, 27, 95, 1) 150%);
+    @media #{$large-mobile} {
+        background: none;
+    }
+    border-bottom-right-radius: 350px;
+}
+
+.carousel {
+    .carousel-item {
+        height: 100%;
+        position: relative;
+        // z-index: 1;
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .carousel-caption {
+            z-index: 9;
+            color: $dark;
+            left: 0;
+            right: auto;
+            bottom: 0;
+            top: 0;
+            width: 100%;
+            text-align: left;
+            height: 100%;
+            display: flex !important;
+            align-items: center;
+            h6 {
+                font-size: 1.3rem;
+                // color: $s/econdary;
+                font-weight: 400;
+                color: $white;
+            }
+            h5 {
+                font-size: 25px;
+                font-weight: 300;
+                line-height: 55px;
+                color: $white;
+                span {
+                    font-size: 62px;
+                    font-weight: 700;
+                    display: inline-block !important;
+                    color: $white;
+                    line-height: 68px;
+                    // background: linear-gradient(45deg, #652d90, $primary);
+                    // -webkit-background-clip: text;
+                    // -webkit-text-fill-color: transparent;
+                }
+                // background: linear-gradient(to right, #3bb8ee, #9832d3);
+                // -webkit-background-clip: text;
+                // -webkit-text-fill-color: transparent;
+                span {
+                    display: block;
+                }
+            }
+            p {
+                font-size: 16px;
+                font-weight: 300;
+                a {
+                    color: $white;
+                    text-decoration: underline;
+                }
+            }
+            .btn-wrapper {
+                margin-top: 30px;
+                .btn {
+                    font-size: 1.3rem;
+                    padding: 10px 20px;
+                }
+            }
+            .caption-content {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                .slider-list {
+                    padding: 0;
+                    margin: 0;
+                    li {
+                        list-style: none;
+                        padding: 5px 0;
+                        color: $white;
+                        font-weight: 300;
+                        &:before {
+                            content: '\f058';
+                            font-family: "Font Awesome 6 Pro";
+                            color: $primary;
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
+            @media #{$large-mobile} {
+                align-items: inherit;
+                h5 {
+                    font-size: 20px;
+                    line-height: 25px;
+                }
+                h6 {
+                    font-size: 0.9rem;
+                }
+                .caption-content {
+                    .slider-list {
+                        li {
+                            font-size: 14px;
+                            &:before {
+                                margin-right: 5px;
+                            }
+                        }
+                    }
+                }
+                .btn-wrapper {
+                    margin-top: 15px;
+                    .btn {
+                        font-size: 14px;
+                        padding: 5px 10px;
+                    }
+                }
+            }
+        }
+        &:after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            display: block;
+            // background: linear-gradient(
+            //   to top,
+            //   rgba(152, 50, 211, 0.85) 0%,
+            //   rgba(59, 184, 238, 0) 100%
+            // );
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            // z-index: -1;
+        }
+        @media #{$desktop-device} {
+            height: 405px;
+        }
+        .hero-image {
+            max-width: 520px;
+            text-align: center;
+            margin: auto;
+        }
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        height: 200px;
+        width: 80%;
+        bottom: -48px;
+        left: 0;
+        background: $secondary;
+        transform: skew(0, -5deg);
+        z-index: -1;
+    }
+    &::after {
+        //     height: 470px;
+        // width: 1630px;
+        // background: #44106b;
+        // background: linear-gradient(24deg, #44106b 57%, rgba(215, 27, 96, 0.423) 100%);
+        // position: absolute;
+        // content: "";
+        // bottom: -150px;
+        // left: -620px;
+        // transform: rotate(25deg);
+    }
+    .carousel-indicators {
+        z-index: 99;
+        button {
+            background-color: #ffffff;
+        }
+    }
+    .carousel-inner {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        min-height: 630px;
+        align-items: center;
+        display: flex;
+        overflow: hidden;
+        padding: 50px 0;
+        &:before {
+            height: 470px;
+            width: 1630px;
+            background: $secondary;
+            background: linear-gradient(24deg, $secondary 57%, rgba(215, 27, 96, 0.423) 100%);
+            position: absolute;
+            content: "";
+            bottom: -150px;
+            left: -620px;
+            transform: rotate(25deg);
+        }
+    }
+    // div[ class*="carousel-control-"] {
+    //   z-index: 9;
+    // }
+    .carousel-control-next,
+    .carousel-control-prev {
+        z-index: 9;
+        .carousel-control-next-icon,
+        .carousel-control-prev-icon {
+            // filter: none;
+        }
+    }
+}
+
+.carousel .carousel-item .carousel-caption .form-wrapper form .form-group .form-control {
+    height: 60px;
+    padding-right: 150px;
+}
+
+.carousel .carousel-item .carousel-caption .form-wrapper form .form-group .btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+    height: 50px;
+    padding: 0 30px;
+}

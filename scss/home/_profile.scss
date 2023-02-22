@@ -1,0 +1,51 @@
+.profile-info {
+    h2 {
+        font-size: 16px;
+        font-weight: 500;
+        span {
+            font-size: 18px;
+            font-weight: 700;
+        }
+    }
+    .badge {
+        border: 1px solid $secondary;
+        color: $secondary;
+    }
+    .point-collet {
+        color: $primary;
+        font-size: 36px;
+        font-weight: 800;
+        padding-top: 5px;
+        margin: 14px 0px;
+    }
+    p {
+        font-size: 14px;
+        font-weight: 500;
+        &.total-coin {
+            span {
+                font-weight: 600;
+            }
+        }
+        &.expirey{
+          color: $body-light;
+        }
+    }
+
+    .qr-btn{
+      height: 45px;
+      width: 45px;
+    }
+
+    .user-image{
+        height: 80px;
+        width: 80px;
+        border-radius: 8px;
+        flex: 80px 0 0;
+        overflow: hidden;
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}

@@ -1,0 +1,68 @@
+/*----------------------------------------*/
+/*  Department
+/*----------------------------------------*/
+
+.department {
+    // background: url(../img/pattern-4.png) no-repeat, $light-bg;
+    // background-position: center;
+    background-color: $light-bg;
+   .nav-tabs {
+       border: none;
+       flex-wrap: nowrap;
+       margin-top: 50px;
+       gap: 15px;
+       li {
+           width: 100%;
+           background-color: $white;
+           border-radius: 10px;
+        //    margin: 0 10px;
+           box-shadow: 0 1px 10px rgba(24, 24, 24, 0.07);
+           button {
+               border: none;
+               width: 100%;
+               display: flex;
+               align-items: center;
+               height: 60px;
+               color: $dark;
+               font-weight: 700;
+               font-size: 16px;
+               margin: 0;
+               border-radius: 10px;
+               i {
+                   width: 40px;
+                   height: 40px;
+                   display: block;
+                   margin-right: 10px;
+                   flex: 40px 0 0;
+                   img {
+                    width: 100%;
+                    display: block;
+                   }
+               }
+               &.active {
+                   background-color: $primary;
+                   color: $white;
+                   i {
+                       img {
+                           filter: brightness(0) invert(1);
+                       }
+                   }
+               }
+           }
+       }
+   } 
+}
+.navtab-wrap {
+    .tab-content {
+        padding: 50px 0;
+        .image-holder {
+            border-radius: 10px;
+            overflow: hidden;
+            .round-image {
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

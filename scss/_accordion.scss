@@ -1,0 +1,25 @@
+/*----------------------------------------*/
+/*  Accordion
+/*----------------------------------------*/
+.accordion {
+  .accordion-item {
+    border: none;
+    margin-bottom: 15px;
+    // background-color: transparent;
+    box-shadow: 0 0 3px rgba(60, 72, 88, 0.15);
+    .accordion-header {
+      .accordion-button {
+        background-color: darken($white, 5%);
+        padding: 6px 16px;
+        font-weight: 700;
+        color: $dark;
+        box-shadow: none;
+        border: none;
+        border-radius: 0;
+        &.collapsed {
+            background-color: $white;
+        }
+      }
+    }
+  }
+}

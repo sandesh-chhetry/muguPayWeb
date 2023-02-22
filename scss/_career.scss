@@ -1,0 +1,66 @@
+.career-section {
+    background: url(../img/job.jpg) no-repeat center, #f7fbff;
+    background-size: cover;
+    padding: 150px 0;
+    .title-text{
+        margin-bottom: 35px;
+        padding: 40px 20px;
+        h2{
+            font-size: 2.8rem;
+            color: $primary;
+            font-weight: 700;
+        }
+    }
+    .search-bar {
+        display: flex;
+        justify-content: center;
+
+        .search-form {
+            // height: 150px;
+            width: 890px;
+
+            .dropdown {
+                right: 160px;
+            }
+
+            .btn {
+                top: 10px;
+                left: 10px;
+                right: auto;
+                color: $apple;
+
+            }
+
+            .form-control {
+                padding: 14px 320px 15px 50px;
+                border-radius: 6px;
+            }
+
+            .btn-search {
+                display: flex;
+                align-items: center;
+                background-color: #5bb136;
+                color: #ffffff;
+                border-color: #519d30;
+                font-weight: 600;
+            }
+
+            .button-wrap {
+                .btn {
+                    top: 0px;
+                    right: 8px;
+                    padding: 15px 40px;
+                    left: auto;
+                    color: $white;
+
+                    &:hover {
+                        background-color: $primary;
+                        // border-color: $primary;
+                        // border: 1px solid $primary;
+                        // color: $primary;
+                    }
+                }
+            }
+        }
+    }
+}

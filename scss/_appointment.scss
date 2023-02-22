@@ -1,0 +1,89 @@
+/*----------------------------------------*/
+/*  Appointment
+/*----------------------------------------*/
+.appointment-wrapper {
+    position: sticky;
+    z-index: 9999;
+    top: 40%;
+    left: 0;
+  .btn-demo {
+    transform: rotate(-90deg) translate(-4px);
+    writing-mode: vertical-lr;
+    background-color: $secondary;
+    color: $white;
+    left: -105px;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 0 0 10px 10px;
+
+    .icon {
+        width: 20px;
+        display: block;
+        margin: 0 10px 0 10px;
+        img {
+            display: block;
+            width: 100%;
+            filter: brightness(0) invert(1)
+        }
+    }
+    &:focus {
+        box-shadow: none;
+    }
+  }
+  .modal {
+    .modal-dialog {
+    }
+    &.left {
+      .modal-dialog {
+        position: fixed;
+        margin: auto;
+        width: 320px;
+        height: 100%;
+        left: -320px;
+        -webkit-transition: opacity 0.3s linear, left 0.3s ease-out;
+        -moz-transition: opacity 0.3s linear, left 0.3s ease-out;
+        -o-transition: opacity 0.3s linear, left 0.3s ease-out;
+        transition: opacity 0.3s linear, left 0.3s ease-out;
+        -webkit-transform: translate3d(0%, 0, 0);
+        -ms-transform: translate3d(0%, 0, 0);
+        -o-transform: translate3d(0%, 0, 0);
+        transform: translate3d(0%, 0, 0);
+        .modal-content {
+          height: 100%;
+          overflow-y: auto;
+          border-radius: 0;
+          border: none;
+          .modal-body {
+            padding: 15px 15px 80px;
+          }
+          .modal-header {
+            border-bottom-color: #eeeeee;
+            background-color: #fafafa;
+            .modal-title {
+                font-size: 18px;
+                font-weight: 800;
+                line-height: 20px;
+                span {
+                    display: block;
+                    font-size: 14px;
+                    font-weight: 500;
+                }
+            }
+          }
+        }
+      }
+      &.show {
+        .modal-dialog {
+          left: 0;
+        }
+      }
+    }
+  }
+}
+

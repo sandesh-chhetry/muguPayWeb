@@ -1,0 +1,34 @@
+/*----------------------------------------*/
+
+
+/*  Page Banner CSS
+/*----------------------------------------*/
+
+.page-banner-section {
+    background: linear-gradient(45deg, #652d90, $primary);
+    min-height: 250px;
+    padding-top: 78px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    color: $white;
+    z-index: 1;
+    &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "";
+        height: 100%;
+        width: 100%;
+        opacity: 0.2;
+        background-image: url(../img/bg-breadcrumb.svg);
+    }
+    .page-banner-content {
+        .title {
+            font-size: 38px;
+            font-weight: 800;
+        }
+    }
+}

@@ -1,0 +1,123 @@
+.earn-redeem-point {
+    position: relative;
+    
+    &::before {
+        // width: 54px;
+        // height: 54px;
+        // border-radius: 50%;
+        // box-shadow: 0px 0px 1px 1px #0000001a;
+        // background: #d71b5f;
+        // animation: pulse-animation 2s infinite;
+        // content: '';
+        // position: absolute;
+        // bottom: -22px;
+        // right: -22px;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        // font-size: 25px;
+        // color: #fff;
+    }
+    .service-item {
+        .icon {
+            width: 80px;
+            height: 80px;
+            flex: 80px 0 0;
+        }
+    }
+}
+
+.nav-pills {
+  justify-content: center;
+  .nav-item {
+      .nav-link {
+          display: flex;
+          gap: 10px;
+          color: #333;
+          border-radius: 0px;
+          border-bottom: 3px solid #ccc;
+          padding: 10px 32px;
+          h2 {
+              font-size: 20px;
+              font-weight: 600;
+              text-align: left;
+              span {
+                  display: block;
+                  font-size: 12px;
+                  font-weight: 400;
+                  padding-top: 4px;
+              }
+          }
+          .point-icon {
+              height: 40px;
+              width: 40px;
+              margin: auto;
+              img {
+                  height: 100%;
+                  width: 100%;
+                  object-fit: contain;
+                  filter: brightness(0) invert(0);
+              }
+          }
+          &.active {
+              background: none;
+              color: $secondary;
+              border-color: $secondary;
+              img {
+                  filter: initial
+              }
+          }
+      }
+  }
+}
+
+/*GENERAL------------------------*/
+
+.blinking-box1 {
+    position: absolute;
+    top: 0;
+    right: 6%;
+    // margin-right: -300px;
+    z-index: -1;
+    flex: 1 1 auto;
+    display: flex;
+    opacity: 0.1;
+    svg {
+        width: 600px;
+        height: 600px;
+        display: block;
+        margin: auto;
+    }
+}
+
+@keyframes revelar {
+    to {
+        fill: white;
+    }
+}
+
+.rellenoblanco {
+    animation: revelar 1s ease-in-out infinite alternate;
+}
+
+.order01 {}
+
+.order02 {
+    animation-delay: 0.2s;
+}
+
+.order03 {
+    animation-delay: 0.4s;
+}
+
+.order04 {
+    animation-delay: 0.6s;
+}
+
+.order05 {
+    animation-delay: 0.8s;
+}
+
+.order06 {
+    animation-delay: 1s;
+}

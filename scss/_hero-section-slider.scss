@@ -1,0 +1,380 @@
+.hero-section-slider {
+  padding: 20px 0 10px 0;
+
+  .slider-wrapper {
+    .img-container {
+      // width: 100%;
+      height: auto;
+
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 24px;
+      }
+    }
+  }
+
+  .slider-content {
+    position: relative;
+    display: block;
+
+    .slick-arrow-wrapper {
+      width: 40px;
+      height: 40px;
+      right: -20px;
+      top: -10px;
+      border-radius: 50%;
+      position: relative;
+      -webkit-box-shadow: 0 2px 8px 0 rgb(51 60 63 / 22%);
+      box-shadow: 0 2px 8px 0 rgb(51 60 63 / 22%);
+
+      .u-center {
+        position: relative;
+        float: left;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
+
+      &.slick-arrow-next,
+      &.slide-arrow-right {
+        z-index: 1;
+        position: absolute;
+        /* display: block; */
+        cursor: pointer;
+        top: 50%;
+        right: -50px;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        padding: 0;
+        border: none;
+        outline: none;
+      }
+
+      &.slick-arrow-prev,
+      &.slide-arrow-left {
+        z-index: 1;
+        position: absolute;
+        display: block;
+        cursor: pointer;
+        top: 50%;
+        left: -50px;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        padding: 0;
+        border: none;
+        outline: none;
+      }
+    }
+
+    .slider-wrapper-packages {
+      padding: 20px 0px;
+      display: block;
+      overflow: hidden;
+
+      .wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 240px;
+        // border: 1px solid #f0f0f5;
+        border-radius: 8px;
+        background-color: #fbfbfb;
+
+        &:hover {
+          box-shadow: 0 0 5px 0 rgb(0 0 0 / 10%);
+        }
+
+        .block {
+          padding: 15px 20px;
+          margin: 10px 0;
+
+          a {
+            list-style: none;
+            text-decoration: none;
+            color: $black;
+            text-align: left;
+
+            h4 {
+              font-size: 18px;
+              font-weight: 800;
+              margin-bottom: 20px;
+            }
+
+            h6 {
+              margin: 10px 0;
+              font-size: $body-font-size;
+              font-weight: 500;
+              line-height: 22px;
+              display: -webkit-box;
+              -webkit-line-clamp: 2;
+              text-overflow: ellipsis;
+              overflow: hidden;
+              -webkit-box-orient: vertical;
+            }
+
+            h5 {
+              font-size: 16px;
+              margin-bottom: 20px;
+            }
+
+            h3 {
+              font-size: $amount-font-size;
+              font-weight: 800;
+              margin-bottom: 10px;
+              color: $secondary;
+            }
+          }
+        }
+
+        .button {
+          display: flex;
+        //   justify-content: center;
+          align-items: center;
+          padding: 15px;
+          cursor: pointer;
+          color: $primary;
+          border-top: 1px solid #f0f0f5;
+
+          i {
+            margin-right: 6px;
+            color: $secondary;
+            font-size: 16px;
+          }
+
+          .button-text {
+            display: block;
+            align-items: center;
+            justify-content: center;
+            color: $secondary;
+
+            h3 {
+              font-size: 16px;
+              margin-bottom: 0;
+              font-weight: 700;
+            }
+          }
+        }
+      }
+
+      .wrapper-rounded {
+        display: flex;
+        justify-content: center;
+
+        .block {
+          a {
+            text-decoration: none;
+            color: $black;
+
+            .img-rounded {
+              width: 100px;
+              height: 100px;
+
+              img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+                border-radius: 50%;
+                background-color: #f8ecff;
+              }
+            }
+
+            .title-text {
+              h4 {
+                margin-top: 15px;
+                text-decoration: none;
+                text-align: center;
+                font-size: 18px;
+                font-weight: 700;
+                margin-bottom: 5px;
+                &:hover {
+                  color: $primary;
+                }
+              }
+              h5 {
+                font-size: $body-info-font-size;
+                text-align: center;
+                &:hover {
+                  color: $primary;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .slider-wrapper-test-health-packages {
+      @extend.slider-wrapper-packages;
+    }
+
+    .slider-wrapper-medical-packages {
+      padding: 0;
+      display: block;
+      overflow: hidden;
+
+      .wrapper-lists {
+        display: flex;
+        flex-direction: column;
+        // width: 419px !important;
+
+        .block {
+          border: 1px solid #f0f0f5;
+          margin: 10px 0;
+          border-radius: 8px;
+          overflow: hidden;
+
+          .top-block {
+            padding: 0 15px;
+            display: flex;
+            height: 60px;
+            align-items: center;
+            background-color: lighten($primary, 50%);
+            .rounded-img {
+              max-width: 30px;
+              height: 30px;
+              margin-right: 15px;
+              display: flex;
+              align-items: center;
+
+              img {
+                width: 100%;
+                object-fit: cover;
+                border-radius: 50%;
+                background-color: #f8ecff;
+              }
+            }
+
+            h3 {
+              font-size: $primary-body-title-font-size;
+              font-weight: 800;
+              margin: 0;
+            }
+          }
+
+          .bottom-block {
+            .list-block {
+              padding: 10px 15px;
+
+              &:hover {
+                background-color: #f6f6f9;
+              }
+
+              a {
+                text-decoration: none;
+                color: $black;
+
+                .title {
+                  font-size: $body-font-size;
+                  font-weight: 700;
+                  margin-bottom: 0;
+                }
+
+                .body-info {
+                  font-size: $body-info-font-size;
+                }
+              }
+            }
+
+            .button-wrap {
+              padding: 20px 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.slick-dots {
+  list-style: none;
+  text-align: center;
+  margin: 0;
+  width: 100%;
+  bottom: 20px;
+  li {
+    position: relative;
+    display: inline-block;
+
+    // height: 20px;
+    // width: 20px;
+    // margin: 0;
+    // padding: 0;
+    // cursor: pointer;
+    button {
+      margin-top: 20px;
+      border: 1px solid #787887;
+      border-radius: 50%;
+      height: 4px;
+      width: 4px;
+      background-color: #eef5ff;
+      padding: 4px;
+      background: 0 0;
+      display: block;
+      outline: 0;
+      line-height: 0;
+      font-size: 0;
+      color: transparent;
+      cursor: pointer;
+    }
+  }
+
+  li.slick-active button {
+    border: 0;
+    border-radius: 50%;
+    background: 0 0;
+    display: block;
+    height: 5px;
+    width: 5px;
+    padding: 5px;
+    background-color: #28328c;
+  }
+}
+
+/* the slides */
+.slick-slide {
+  margin: 0 9px;
+}
+
+/* the parent */
+.slick-list {
+  margin: 0 -9px;
+}
+
+.slick-slider {
+  position: relative;
+  display: block;
+}
+
+.br-bottom {
+  border-bottom: 1px solid #f0f0f5;
+}
+.heading-title {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+  h2 {
+    font-size: $primary-heading-title-font-size;
+    font-weight: 700;
+  }
+
+  a {
+    text-decoration: none;
+    color: $secondary;
+
+    h4 {
+      font-size: 14px;
+    }
+  }
+  .btn-css {
+    border: 3px solid $secondary;
+    color: $secondary;
+    &:hover {
+      background-color: $secondary;
+      color: $white;
+    }
+  }
+}

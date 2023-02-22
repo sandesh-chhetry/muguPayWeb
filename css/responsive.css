@@ -1,0 +1,9 @@
+@charset "UTF-8";
+/*----------------------------------------*/
+/*  Responsive Css
+/*----------------------------------------*/
+@media (max-width: 767px) { 
+    .sub-header .time-column {
+        display: none !important;
+    }  
+}

@@ -1,0 +1,144 @@
+.faq-top-section {
+    background: url(../img/faq-100.jpg) no-repeat center, #f7fbff;
+    background-size: cover;
+    padding: 150px 0;
+    .title-text {
+        margin-bottom: 35px;
+        padding: 40px 20px;
+        h2 {
+            font-size: 2.8rem;
+            color: $primary;
+            font-weight: 700;
+        }
+    }
+}
+
+.faq-section {
+    .accordion .accordion-item .accordion-header .accordion-button {
+        padding: 16px 16px;
+        background-color: #f2f2f2 !important;
+        border: 1px solid $secondary;
+        border-radius: 4px;
+        &.collapsed{
+            border: none;
+        }
+        &::after {
+            height: 0.7rem;
+            width: 0.7rem;
+            background-size: 0.7rem;
+        }
+    }
+
+    .nav-pills{
+        justify-content: flex-start;
+        gap: 16px;
+        flex-direction: column;
+        .nav-link{
+            padding: 16px;
+            width: 100%;
+            padding-bottom: 8px;
+            .point-icon{
+                margin: initial;
+            }
+        }
+
+        a.btn{
+            width: fit-content !important;
+        }
+    }
+}
+
+// Single FAQ 
+.single-faq {
+    border: 0;
+    margin-top: 20px;
+    padding: 40px 40px;
+    @media #{$large-mobile} {
+        padding: 0;
+    }
+    & .accordion-button {
+        box-shadow: none;
+        background-color: $white;
+        font-size: 18px;
+        line-height: 1.4;
+        font-weight: 600;
+        color: $heading-color;
+        padding: 15px;
+        letter-spacing: -0.3px;
+        @media #{$large-mobile} {
+            font-size: 14px;
+        }
+    }
+    & .accordion-body {
+        padding: 15px;
+        border-top: 1px solid rgba(0, 0, 0, 0.125);
+        font-size: 15px;
+        & p {
+            padding-top: 15px;
+        }
+        @media #{$large-mobile} {
+            font-size: 12px;
+        }
+    }
+    .accordion-item {
+        border: none;
+        margin-bottom: 30px;
+        border-bottom: none;
+        &:last-child {
+            border-bottom: none;
+        }
+        @media #{$large-mobile} {
+            margin-bottom: 10px;
+        }
+    }
+    .faq-content {
+        margin-top: 30px;
+        height: 100%;
+        border-right: 1px solid #ccc;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        h2 {
+            margin-bottom: 30px;
+            line-height: 39px;
+            font-weight: 800;
+            span {
+                display: block;
+            }
+        }
+        .btn {
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        }
+        .icon {
+            width: 50px;
+            margin: 20px 0;
+        }
+    }
+}
+
+.faq-section {
+    margin-top: 0 !important;
+    .faq-wrapper {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+}
+
+.content-list {
+    padding: 0;
+    list-style: none;
+    li {
+        position: relative;
+        // padding-left: 20px;
+        padding: 10px 0 10px 20px;
+        b {}
+        &:before {
+            content: "\f058";
+            font-family: FontAwesome;
+            color: $primary;
+            position: absolute;
+            top: 9px;
+            left: 0;
+        }
+    }
+}

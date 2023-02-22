@@ -1,0 +1,404 @@
+
+// Set HTML color-scheme value based on current theme
+html {
+    color-scheme: light;
+}
+html[data-theme=dark] {
+    color-scheme: dark;
+}
+
+
+// Switch image display on/off based on current theme
+// When current theme is light, don't display the dark images
+[data-theme="light"] [data-image-theme="dark"] {
+  display: none;
+}
+// When the current theme is dark, don't display the light images
+[data-theme="dark"] [data-image-theme="light"] {
+  display: none;
+}
+
+
+
+// CSS colors are defined as Custom properties so they can be toggled in dark mode
+// Brad Frost's 3-tier approach
+
+// Level 1: Color Definitions
+:root {
+   --gray-93: hsl(214, 0%, 93%);
+   --gray-90: hsl(214, 0%, 90%);
+   --gray-85: hsl(214, 0%, 85%);
+   --gray-20: hsl(214, 2%, 20%);
+   --gray-15: hsl(214, 0%, 15%);
+   --white-hsl: 214, 0%, 100%;
+   --white-15: hsla(var(--white-hsl), .15);
+   --white: hsl(214, 0%, 100%);
+}
+
+// Level 2: Swap usage of colors in dark mode (point to level 1)
+
+:root, html[data-theme='light'] {
+   --bg-gray-90: var(--gray-90);
+   --text-gray: var(--gray-20);
+   --bg-white: var(--white);
+   --border-gray-85: var(--gray-85);
+   --border-gray-93: var(--gray-93);
+   --border-white: var(--white-15);
+}
+
+:root, html[data-theme='dark'] {
+   --bg-gray-90: var(--gray-15);
+   --text-gray: var(--gray-90);
+   --bg-white: var(--gray-20);
+   --border-gray-85: var(--white-15);
+   --border-gray-93: var(--white-15);
+   --border-white: var(--bg-white);
+}
+
+// Level 3: Component properties (point to level 2)
+
+[data-theme=dark] body {
+   background: var(--bg-gray-90) !important;
+//    color: var(--text-gray) !important;
+}
+
+.tile {
+   background-color: var(--bg-white);
+   border: 1px solid var(--border-gray-85);
+   max-width: 60em;
+   margin: 1rem auto 0;
+}
+
+hr {
+   border-top: 1px solid var(--border-gray-93);
+   border-bottom: 1px solid var(--border-white);
+}
+
+
+
+
+
+
+// Theme switch toggle and animation
+// Switch from: https://gui-challenges.web.app/theme-switch/dist/
+
+@import"https://unpkg.com/open-props/easings.min.css";
+.sun-and-moon > :is(.moon,.sun,.sun-beams) {
+    transform-origin: center center
+}
+.sun-and-moon > :is(.moon,.sun) {
+    fill: #ffffff;
+}
+.theme-toggle:is(:hover,:focus-visible) > .sun-and-moon > :is(.moon,.sun) {
+    fill: var(--icon-fill-hover)
+}
+.sun-and-moon > .sun-beams {
+    stroke: var(--icon-fill);
+    stroke-width: 2px
+}
+.theme-toggle:is(:hover,:focus-visible) .sun-and-moon > .sun-beams {
+    stroke: var(--icon-fill-hover)
+}
+[data-theme=dark] .sun-and-moon > .sun {
+    transform: scale(1.75)
+}
+[data-theme=dark] .sun-and-moon > .sun-beams {
+    opacity: 0
+}
+[data-theme=dark] .sun-and-moon > .moon > circle {
+    transform: translate(-7px)
+}
+@supports (cx: 1) {
+    [data-theme=dark] .sun-and-moon > .moon > circle {
+        transform: translate(0);
+        cx: 17
+    }
+}
+@media (prefers-reduced-motion: no-preference) {
+    .sun-and-moon > .sun {
+        transition: transform .5s var(--ease-elastic-3)
+    }
+    .sun-and-moon > .sun-beams {
+        transition: transform .5s var(--ease-elastic-4),opacity .5s var(--ease-3)
+    }
+    .sun-and-moon .moon > circle {
+        transition: transform .25s var(--ease-out-5)
+    }
+    @supports (cx: 1) {
+        .sun-and-moon .moon > circle {
+            transition: cx .25s var(--ease-out-5)
+        }
+    }
+    [data-theme=dark] .sun-and-moon > .sun {
+        transform: scale(1.75);
+        transition-timing-function: var(--ease-3);
+        transition-duration: .25s
+    }
+    [data-theme=dark] .sun-and-moon > .sun-beams {
+        transform: rotate(-25deg);
+        transition-duration: .15s
+    }
+    [data-theme=dark] .sun-and-moon > .moon > circle {
+        transition-delay: .25s;
+        transition-duration: .5s
+    }
+}
+.theme-toggle {
+    --size: 1.5rem;
+    --icon-fill: rgb(255, 255, 255);
+    --icon-fill-hover: hsl(210 10% 15%);
+    background: none;
+    border: none;
+    padding: 0;
+    inline-size: var(--size);
+    block-size: var(--size);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    cursor: pointer;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    outline-offset: 5px;
+}
+.theme-toggle > svg {
+    inline-size: 100%;
+    block-size: 100%;
+    stroke-linecap: round
+}
+[data-theme=dark] .theme-toggle {
+    --icon-fill: hsl(210 10% 70%);
+    --icon-fill-hover: hsl(210 15% 90%)
+}
+@media (hover: none) {
+    .theme-toggle {
+        --size: 48px;
+        @media #{$small-mobile}{ 
+            --size: 18px;
+          }
+    }    
+}
+* {
+    box-sizing: border-box;
+    margin: 0
+}
+@supports not (color-scheme: dark) {
+    html[data-theme=dark] {
+        background: #111
+    }
+}
+@-webkit-keyframes octocat-wave {
+    0%,to {
+        transform: rotate(0)
+    }
+    20%,60% {
+        transform: rotate(-25deg)
+    }
+    40%,80% {
+        transform: rotate(10deg)
+    }
+}
+@keyframes octocat-wave {
+    0%,to {
+        transform: rotate(0)
+    }
+    20%,60% {
+        transform: rotate(-25deg)
+    }
+    40%,80% {
+        transform: rotate(10deg)
+    }
+}
+[data-theme=dark] header .navbar {
+    background-color: $dark !important;
+}
+[data-theme=dark] header .navbar .navbar-nav .nav-item .nav-link {
+    color: $white;
+}
+[data-theme=dark] header .navbar .navbar-brand {
+    background-color: $white;
+}
+[data-theme=dark] .hot-topic-list-wrapper {
+    background-color: $dark;
+}
+[data-theme=dark] .hot-topic-list-wrapper .rightJS div a {
+   color: $white;
+}
+[data-theme=dark] {
+    body {
+        color: $white;
+    }
+    .sideblock {
+        background-color: $dark;
+        .member-wrap {
+            background-color: $dark;
+            .member-info {
+                .member-content {
+                    h4, p {
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+    .services-one {
+        .service-sec {
+            background-color: $dark;
+            .detail {
+                color: $white;
+                ul {
+                    li {
+                        a {
+                            color: $white; 
+                        }
+                        &:before {
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .news-post, .schedule-wrap {
+        background-color: $dark;
+        .post-content {
+            h4 {
+                a {
+                    color: $white;
+                }
+            }
+            .meta-post {
+                color: $white;
+            }
+        }
+        ul {
+            li {
+                color: $white;
+                &:before {
+                    filter: brightness(0) invert(1);
+                }
+            }
+        }
+    } 
+    .small-setion-title {
+        h3 {
+            color: $white;
+        }
+    }
+    .about-content {
+        .text-title {
+            color: $white;
+        }
+    }
+    .service-wrapper {
+        .service-detail-content {
+            .service-detail-list {
+                background-color: $dark;
+            }
+        }
+        .card {
+            background-color: lighten($dark, 10%);
+            a {
+                color: $white;
+                .icon {
+                    img {
+                        filter: brightness(0) invert(1);
+                    }
+                }
+            }
+        }
+    }
+    .emergency-content {
+        p {
+            color: $dark;
+        }
+    }
+    .service-section, .blog-item {
+        background-color: $dark !important;
+        .blog-content {
+            h3 {
+                a {
+                    color: $white;
+                }
+            }
+        }
+        .card-action-info {
+            border-color: lighten($dark, 20%);
+            span {
+                .icon {
+                    img {
+                        filter: brightness(0) invert(1);
+                    }
+                }
+            }
+        }
+    }
+    .team-list {
+        background-color: lighten($dark, 10%);
+    }
+    .sidebar {
+        .widget {
+            background-color: $dark;
+            &.widget-search {
+                .blog-search {
+                    input {
+                        border-color: lighten($dark, 20%);
+                        background-color: lighten($dark, 10%);
+                    }
+                    .search-button {
+                        color: $white;
+                    }
+                }
+            }
+            &.widget-categories {
+                .category-list {
+                    a {
+                        color: $white;
+                        border-color: lighten($dark, 20%);
+                    }
+                }
+            }
+        }       
+    }
+    .social-share {
+        border-color: lighten($dark, 20%);
+    }
+    .blog-comment {
+        .comment-list {
+            .comment {
+                background-color: lighten($dark, 10%);
+            }
+        }
+    }
+    .blog-comment-form {
+        .form-control {
+            border-color: lighten($dark, 20%);
+            background-color: lighten($dark, 10%);
+            color: $white;
+            &::-webkit-input-placeholder { 
+                color: darken($white, 25%); 
+            }
+            &::-moz-placeholder { color:darken($white, 25%);  }
+            &::-ms-input-placeholder { color:darken($white, 25%);  }
+        }
+    }
+    .contact-inofrmation {
+        .contact-us {
+            .icon-box {
+                background-color: $dark;
+            }
+        }
+    }
+    .contact-us-form {
+        background-color: $dark;
+        .form-group {
+            .form-control {
+                border-color: lighten($dark, 20%);
+            background-color: lighten($dark, 10%);
+            }
+        }
+    }
+}
+
+
+
+
+

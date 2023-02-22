@@ -1,0 +1,69 @@
+/*----------------------------------------*/
+/*  Member
+/*----------------------------------------*/
+
+/*..... Member ......*/
+.member-wrap {
+  background-color: $white;
+  border-radius: 10px;
+  padding: 20px;
+  // text-align:  center;
+  .member-info {
+    display: flex;
+    // justify-content: center;
+    align-items: flex-start;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    // border-bottom: 1px solid #ccc;
+    .member-img {
+      border-radius: 10px;
+      overflow: hidden;
+      width: 100px;
+      height: 100px;
+      margin-right: 15px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+    }
+    .member-content {
+      h4 {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: $dark;
+        margin-bottom: 5px;
+        @media #{$desktop-device}{ 
+          font-size: 1rem;
+        }
+      }
+      p {
+        margin: 0;
+        color: lighten($dark, 20%);
+        font-size: 0.85rem;
+        line-height: 21px;
+        font-weight: 500;
+        @media #{$desktop-device}{ 
+          font-size: 12px;
+        }
+        &:first-child {
+          font-weight: 600;
+        }
+      }     
+    }
+    &:last-child {
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+    @media #{$desktop-device}{ 
+      padding-bottom: 5px;
+      margin-bottom: 5px;
+    }
+  }
+}
+.sideblock {
+  .member-wrap {
+    padding: 0;
+  }
+}

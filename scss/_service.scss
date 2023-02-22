@@ -1,0 +1,221 @@
+/*----------------------------------------*/
+
+
+/*  SERVICES ONE
+/*----------------------------------------*/
+
+
+/*..... SERVICES ONE ......*/
+
+.service-section {
+    padding: 0;
+    .about-content {
+        padding: 50px 0;
+    }
+}
+
+.service-list-wrap {
+    // margin-top: 30px;
+    .service-item {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        // border-bottom: 1px solid darken($white, 10%);
+        padding: 40px 0 20px 0;
+        position: relative;
+        height: 100%;
+        .icon {
+            width: 50px;
+            height: 50px;
+            flex: 50px 0 0;
+            margin-right: 15px;
+            // margin-top: 5px;
+            img {
+                width: 100%;
+                display: block;
+            }
+            @media #{$large-mobile} {
+                width: 30px;
+                height: 30px;
+                flex: 30px 0 0;
+            }
+        }
+        .service-content {
+            h2 {
+                color: $dark;
+                font-size: 20px;
+                line-height: 25px;
+                text-align: center;
+                padding-top: 16px;
+                a {
+                    text-decoration: none;
+                    color: $dark;
+                    font-size: 20px;
+                    line-height: 25px;
+                    display: block;
+                    text-align: center;
+                }
+            }
+            p {
+                // color: lighten($dark, 20%);
+                text-align: center;
+                // -webkit-line-clamp: 2;
+                // text-overflow: ellipsis;
+                // display: -webkit-box;
+                // -webkit-box-orient: vertical;
+                // overflow: hidden;
+            }
+        }
+        &:before {
+            content: "";
+            width: 1px;
+            height: 70%;
+            // background-color: darken($white, 10%);
+            display: block;
+            position: absolute;
+            top: 25px;
+            right: -10px;
+        }
+        &.br-0 {
+            &:before {
+                display: none;
+            }
+        }
+        &.bb-0 {
+            border-bottom: none;
+        }
+        @media #{$large-mobile} {
+            padding: 10px 0;
+        }
+    }
+}
+
+.booking-appoinment {
+    height: 100%;
+    background-color: $primary;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+    p {
+        color: $white;
+        margin: 0;
+        font-size: 16px;
+        // color: lighten($primary, 40%);
+    }
+    h2 {
+        color: $white;
+        margin-top: 0;
+        font-size: 2rem;
+        font-weight: 800;
+        line-height: 37px;
+    }
+    form {
+        margin-top: 25px;
+        .form-control {
+            height: 50px;
+            border: none;
+            font-size: 16px;
+            // background-color: lighten($primary, 40%);
+        }
+        .btn {
+            padding: 10px 20px;
+            width: 100%;
+        }
+    }
+    .form-wrapper {
+        max-width: 350px;
+        margin: 0 auto;
+        width: 100%;
+    }
+}
+
+.services {
+    // background: url(../img/backgraoundimg.png) no-repeat center, #f7fbff;
+    // object-fit: cover;
+    // width: 100%;
+    .content {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h2 {
+            margin-bottom: 30px;
+            color: $primary;
+            font-weight: 700;
+            font-size: 2.8rem;
+        }
+        ul {
+            padding: 0;
+            i {
+                color: $secondary;
+                margin-right: 10px;
+            }
+            li {
+                list-style: none;
+                font-size: 18px;
+                .text-bold {
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+    .image-holder {
+        .round-image {
+            img {
+                height: 350px;
+                width: 250px;
+                object-fit: cover;
+                border-radius: 16px;
+            }
+        }
+    }
+}
+
+.solution-primaryDiv {
+    background: linear-gradient(45deg, #652d90, $primary);
+    padding: 20px;
+    color: $white;
+    height: 100%;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1;
+    h2 {
+        // font-size: 22px;
+        // line-height: 2rem;
+    }
+    p {
+        font-size: 18px;
+        // margin: 0;
+    }
+    &:before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        display: block;
+        background: url(../img/slider-02-2.jpg);
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: .1;
+        z-index: -1;
+    }
+}
+
+.solution-wrap {
+    .service-item {
+        padding: 20px;
+        background-color: $white;
+        border-radius: 10px;
+        // margin-bottom: 15px;
+        box-shadow: -2px 5px 35px 10px rgba(0, 0, 0, 0.06);
+    }
+    div[class*="col-"] {
+        margin-bottom: 20px;
+    }
+}

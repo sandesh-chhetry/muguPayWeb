@@ -1,0 +1,67 @@
+/*----------------------------------------*/
+/*  Energency
+/*----------------------------------------*/
+.emergency-div {
+    background: url(../img/em-bg.png);
+    // padding: 20px 0 20px 0;
+    background-size: cover;
+    margin-top: 60px;
+}
+.emergency-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 0;
+    // align-items: center;
+    h3 {
+        font-size: 30px;
+        font-weight: 600;
+        color: $primary;
+        margin-bottom: 15px;
+        span {
+            // display: block;
+        }
+    }
+    p {
+        font-size: 20px;
+        margin-bottom: 0;
+        text-align: left;
+        span {
+            font-weight: bold;
+        }
+    }
+    .button-wrap {
+        margin-top: 20px;
+        .btn {
+            background-color: $secondary;
+            border: 1px solid darken($secondary, 10%);
+            &:hover {
+                background-color: darken($secondary, 10%);
+            }
+        }
+    }
+    @media #{$large-mobile}{ 
+        text-align: center;
+        h3 {
+            font-size: 20px;
+        }
+        p {
+            text-align: center;
+            font-size: 16px;
+        }
+      }
+}
+.ai-image {
+    max-width: 400px;
+    margin-top: -90px;
+    img {
+        width: 100%;
+        display: block;
+    }
+    @media #{$large-mobile}{ 
+        display: none;
+      }
+}
+
+

@@ -1,0 +1,76 @@
+.reward-partner {
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    padding-bottom: 150px;
+    .reward-partner-wrapper {
+        .card-list {
+            z-index: 100;
+            padding: 32px;
+            border-radius: 8px;
+            background-color: white;
+            box-shadow: 0px 8px 24px 0 #1d8cf229;
+            transition: filter 0.2s ease-in-out;
+            color: #333333;
+            border: none;
+            height: 100%;
+            .title {
+                h2 {
+                    font-size: 18px;
+                    padding-bottom: 20px;
+                    border-bottom: 1px solid #ccc;
+                    color: $secondary;
+                }
+            }
+            .partner-content {
+                padding-top: 12px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 6;
+                /* number of lines to show */
+                line-clamp: 6;
+                -webkit-box-orient: vertical;
+            }
+            a {
+                text-align: right;
+                text-decoration: none;
+                color: $secondary;
+                padding-top: 15px;
+                font-weight: 600;
+                justify-content: end;
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                svg {
+                    font-size: 12px;
+                    font-weight: 400;
+                }
+                &:hover {
+                    color: $primary;
+                }
+            }
+        }
+    }
+    &::before {
+        position: absolute;
+        content: "";
+        height: 65%;
+        width: 100%;
+        bottom: -90px;
+        left: 0;
+        background: linear-gradient(24deg, $secondary 30%, $primary 150%);
+        opacity: 0.9;
+        z-index: -1;
+        transform: skew(0, 6deg);
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        height: 200px;
+        width: 100%;
+        background: linear-gradient(0deg, #343a40, #ffffff00);
+        bottom: 0;
+        left: 0;
+    }
+}

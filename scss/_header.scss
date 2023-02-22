@@ -1,0 +1,147 @@
+/*----------------------------------------*/
+
+
+/*  03. Header CSS
+/*----------------------------------------*/
+
+// Navbar Css Started
+header {
+    .navbar {
+        background-color: transparent !important;
+        padding: 0;
+        transition: all 0.5s;
+        // border-bottom: 1px solid #ccc;
+        .navbar-brand {
+            display: flex;
+            width: 85px;
+            align-items: center;
+            line-height: 22px;
+            font-weight: 800;
+            img {
+                width: 100%;
+                display: block;
+                margin-right: 15px;
+            }
+            span {
+                display: block;
+                span {
+                    display: block;
+                    font-size: 1rem;
+                }
+            }
+            @media #{$large-mobile} {
+                width: 80px;
+            }
+        }
+        .navbar-nav {
+            .nav-item {
+                .nav-link {
+                    padding: 1.3rem 1rem;
+                    font-weight: 400;
+                    color: $white;
+                    &:before {
+                        content: ""
+                    }
+                    @media #{$large-mobile} {
+                        padding: 0.5rem 0;
+                    }
+                    &:hover,
+                    &.active {
+                        color: $primary;
+                    }
+                }
+                &.dropdown {
+                    .dropdown-menu {
+                        padding: 0;
+                        background-color: $primary;
+                        border: none;
+                        overflow: hidden;
+                        border-radius: 0;
+                        margin-top: 0;
+                        a {
+                            color: $white;
+                            &:hover,
+                            &:focus {
+                                background-color: $secondary;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.header-scrolled {
+          background: #fff !important;
+          box-shadow: 0px 6px 24px 0 #1d8cf224;
+          .appointment-btn::before{
+            background-color: $secondary;
+          }
+          a{
+            color: $secondary !important;
+            font-weight: 500 !important;
+            &:hover{
+                color: $primary !important;
+            }
+          }
+        }
+    }
+    .appointment-btn {
+        display: flex;
+        align-items: center;
+        .btn {
+            display: flex;
+            align-items: center;
+            i {
+                width: 30px;
+                margin-right: 3px;
+            }
+        }
+        &:before {
+            content: "";
+            width: 1px;
+            height: 15px;
+            display: block;
+            // margin-right: 10px;
+            background-color: $white;
+        }
+        a {
+            text-decoration: none;
+            color: $white;
+            padding: 0 15px;
+            &:hover {
+                color: $primary;
+            }
+        }
+        @media #{$large-mobile} {
+            margin-right: 3px;
+            a {
+                font-size: 14px;
+            }
+            &:before {
+                display: none;
+            }
+            .btn {
+                font-size: 14px;
+                padding: 5px 10px;
+                i {
+                    width: 20px;
+                }
+            }
+        }
+    }
+}
+
+.navbar-toggler {
+    @media #{$large-mobile} {
+        padding: 5px 10px;
+    }
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+.navbar-toggler-icon {
+    @media #{$large-mobile} {
+        width: 1em;
+        height: 1em;
+    }
+}

@@ -1,0 +1,239 @@
+/*----------------------------------------*/
+/*  Contact
+/*----------------------------------------*/
+.contact-page {
+  padding: 30px 0;
+}
+
+.contact-inofrmation {
+  .section-title-wrapper {
+    .section-header {
+      font-size: 25px;
+      font-weight: 800;
+    }
+
+    p {
+      font-size: 18px;
+      margin-top: 10px;
+      font-weight: normal;
+    }
+  }
+
+  .contact-us {
+    margin: 40px 0;
+
+    .icon-box {
+      background-color: $white;
+      padding: 30px;
+      border-radius: 10px;
+      // box-shadow: 0 5px 50px 0 rgb(0, 0, 0, 0.1);
+
+      .icon-box-icon {
+        display: block;
+        width: 65px;
+        margin: 15px auto;
+
+        img {
+          width: 100%;
+          display: block;
+        }
+      }
+
+      @media #{$large-mobile} {
+
+        margin-bottom: 15px;
+      }
+    }
+
+    .icon-box-content {
+      .icon-box-title {
+        font-size: 1.1rem;
+        font-weight: 700;
+      }
+
+      p {
+        font-size: 16px;
+        font-size: 500;
+      }
+    }
+  }
+}
+
+.contact-us-form {
+  background-color: $white;
+  border-radius: 10px;
+  padding: 20px 30px;
+
+  h2 {
+    font-size: 25px;
+    font-weight: 800;
+  }
+
+  .form-group {
+    label {
+      color: #333;
+      line-height: 2;
+    }
+
+    .form-control {
+      margin-bottom: 0.3rem;
+      min-height: 3.4rem;
+      border-radius: 0.3rem;
+    }
+
+    textarea.form-control {
+      margin-bottom: 2.1rem;
+    }
+  }
+}
+
+.contact-google-map {
+  background-color: #ddd;
+}
+
+.map-wrapper {
+  border-radius: 10px;
+  overflow: hidden;
+  height: 100%;
+}
+
+.contact-section {
+  background: url(../img/image-bg.png) no-repeat center, $light-bg;
+  background-size: cover;
+  //   height: 500px;
+  padding: 70px 0;
+
+  .contact-details {
+    padding: 40px 40px;
+    background-color: $primary;
+    border-radius: 20px;
+
+    .heading-section {
+      h3 {
+        font-size: $primary-body-title-font-size;
+        font-weight: 700;
+        color: $white;
+      }
+
+      h5 {
+        font-size: $body-info-font-size;
+        color: $white;
+      }
+    }
+
+    .details {
+      padding: 10px 0px;
+
+      .block {
+        padding: 20px 0px;
+
+        h3 {
+          font-size: $primary-body-title-font-size;
+          font-weight: 700;
+          color: $white;
+
+        }
+
+        .wrapper {
+          color: $white;
+          display: flex;
+
+          // align-items: center;
+          .icon {
+            font-size: $primary-body-title-font-size;
+
+            margin-top: 1px;
+          }
+
+          .text-wrap {
+            padding: 0 10px;
+
+            h3 {
+              font-size: $primary-body-title-font-size;
+              font-weight: 700;
+
+            }
+
+            h5 {
+              font-size: $body-info-font-size;
+            }
+          }
+
+
+
+        }
+
+
+      }
+    }
+
+    .block-footer {
+      padding: 20px 0px;
+
+      h3 {
+        font-size: $primary-body-title-font-size;
+        font-weight: 700;
+        color: $white;
+
+      }
+
+      .footer-wrapper {
+        // display: flex;
+        // justify-content: center;
+
+        .footer-links {
+          display: flex;
+          // align-items: center;
+          // justify-content: center;
+
+          .icon {
+            font-size: $primary-body-title-font-size;
+            margin-top: 1px;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+.form-container {
+  padding: 37px 170px;
+  
+  .heading {
+    margin-bottom: 34px;
+    h2 {
+      font-size: $primary-heading-title-font-size;
+      font-weight: 700;
+    }
+
+    h4 {
+      font-size: $body-info-font-size;
+
+      span {
+        color: $primary;
+      }
+    }
+  }
+
+  label {
+    font-size: $body-info-font-size;
+  }
+
+  .form-control {
+    border-radius: 8px;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+
+    .btn {
+      width: 250px;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+}
