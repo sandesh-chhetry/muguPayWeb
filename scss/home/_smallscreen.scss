@@ -36,14 +36,26 @@
             font-weight: 500;
         }
     }
-
-    .btn{
+    .btn {
+        font-size: 14px;
+    }
+    a {
+        // text-decoration: none;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    .font-sm {
         font-size: 14px;
     }
 }
 
 .text-light {
     color: #999999 !important;
+}
+
+.text-secondary {
+    color: $secondary !important;
 }
 
 .badge {
@@ -56,6 +68,11 @@
     color: $secondary;
     background: #e6e6e6;
     margin-bottom: 5px;
+}
+
+.badge-primary {
+    border: 1px solid $secondary;
+    color: $secondary;
 }
 
 .badge-alert {
@@ -170,4 +187,30 @@
 .game-btn {
     padding: 12px;
     font-size: 14px;
+}
+
+@media #{$small-mobile} {
+    header {
+        position: sticky;
+        top: 0;
+        z-index: 333;
+        background: linear-gradient(24deg, $secondary 57%, $primary 150%) !important;
+        border-radius: 0px 0px 20px 20px;
+        .navbar {
+            position: initial !important;
+        }
+        .navbar.header-scrolled {
+            background: transparent !important;
+            a {
+                svg {
+                    filter: brightness(0) invert(1);
+                }
+            }
+        }
+        .navbar-brand {
+            img {
+                filter: brightness(0) invert(1);
+            }
+        }
+    }
 }

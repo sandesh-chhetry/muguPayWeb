@@ -7,10 +7,6 @@
             font-weight: 700;
         }
     }
-    .badge {
-        border: 1px solid $secondary;
-        color: $secondary;
-    }
     .point-collet {
         color: $primary;
         font-size: 36px;
@@ -34,6 +30,9 @@
     .qr-btn{
       height: 45px;
       width: 45px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .user-image{

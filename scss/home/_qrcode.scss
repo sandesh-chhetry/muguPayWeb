@@ -1,0 +1,159 @@
+.qr-code-section {
+    text-align: center;
+    .qr-code-wrap {
+        padding: 50px 0px !important;
+        .pay-logo {
+            height: 80px;
+            width: auto;
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+        .title {
+            padding: 30px 0px;
+            h4 {
+                color: $primary;
+                font-weight: 700;
+                font-size: 20px;
+            }
+            p {
+                color: $body-light;
+                font-size: 12px;
+                margin: 0;
+            }
+        }
+        .qr-code {
+            height: 200px;
+            width: 200px;
+            // overflow: hidden;
+            margin: auto;
+            .qr {
+                height: 100%;
+            }
+        }
+    }
+    .modal-content {
+        height: calc(100vh);
+        overflow: hidden;
+        // position: absolute;
+        &::before,
+        &::after {
+            position: absolute;
+            content: "";
+            height: 50%;
+            width: 100%;
+            background: linear-gradient(24deg, #44106b 57%, #d71b5f 150%) !important;
+            border-radius: 50%;
+            
+        }
+        &::after{
+          left: -25%;
+          bottom: -35%;
+        }
+
+        &::before{
+          right: -25%;
+          bottom: -40%;
+        }
+    }
+    .btn-close {
+        position: absolute;
+        right: 18px;
+        top: 18px;
+        height: 12px;
+        width: 12px;
+        z-index: 1;
+        border-radius: 50px;
+        padding: 6px;
+        font-size: 6px;
+        box-shadow: 0px 0px 5px #9c9a9a;
+        opacity: 0.8;
+    }
+}
+
+.qr-buttons {
+    .btn {
+        background: $light-bg;
+        // border: 1px solid $primary;
+        border: none;
+        color: $primary;
+        font-size: 12px;
+        text-transform: uppercase;
+        font-weight: 700;
+        i {
+            font-size: 12px;
+            margin-right: 5px;
+        }
+        &:hover {
+            color: $white;
+        }
+    }
+}
+
+.scan-qr {
+    // background: #404040;
+    background: #00000091;
+    // #camera {
+    //     margin: 0 auto;
+    //     width: 100%;
+    //     max-width: 200px;
+    //     height: 200px;
+    //     background-color: #000;
+    // }
+    // #result {
+    //     text-align: center;
+    //     margin-top: 20px;
+    //     font-size: 24px;
+    // }
+    #qrscanner {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #000000;
+        color: #ffffff;
+    }
+    #qrscanner video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    #qrscanner canvas {
+        display: none;
+    }
+    #qrscanner #qr-result {
+        display: none;
+        font-size: 2em;
+        margin-top: 20px;
+    }
+    #qr-result{
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background: #fff;
+      color: $primary;
+    }
+    .pay-logo {
+        img {
+            filter: brightness(0) invert(1);
+        }
+    }
+    .title {
+        h4,
+        p {
+            color: #fff !important;
+        }
+    }
+}
+
+@media #{$small-mobile}{
+    .qr-code-section{
+      .modal-dialog{
+        margin: 0 !important;
+      }
+    }
+}

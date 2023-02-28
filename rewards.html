@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Bootstrap CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Fonts Style-->
+
+  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="fonts/fontawesome-free-6.1.1-web/css/all.css" />
+  <!--load all styles -->
+  <!-- <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" /> -->
+  <link rel="stylesheet" type="text/css" href="css/slick.css" />
+  <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
+  <link href="css/style.css" rel="stylesheet" />
+  <title>Mugu Pay | Features</title>
+</head>
+
+<body class="">
+  <!-- Back to top button -->
+  <a id="scrolltop"></a>
+  <!-- Header Started -->
+  <header class="">
+    <nav class="navbar navbar-expand-lg fixed-top" id="header">
+      <div class="small-screen w-100">
+        <div class="container">
+          <div class="d-flex justify-content-between align-items-center w-100">
+            <a class="navbar-brand p-2" href="index.html"><img src="img/logo.png" alt="" />
+            </a>
+            <div class="text-white">
+              <a href="profile.html" class="text-white" style="font-size:24px;"><i class="far fa-user-circle"></i>
+                <span></span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- Header End -->
+  <!-- <div class="bg-gradient-primary cover-nav"></div> -->
+
+  <div class="small-screen body-sm">
+    <!-- section to scan new qr code  -->
+    <section class="qr-code-section card bg-white border-0">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 p-0">
+            <div class="qr-code-wrap scan-qr">
+              <div class="pay-logo">
+                <img src="img/logo.png" alt="">
+              </div>
+
+              <div class="title">
+                <h4 class="m-0">Scan & Pay</h4>
+                <p>Scan to Pay on Merchant outlets</p>
+              </div>
+
+              <div class="qr-code">
+                <div class="qr">
+                  <div id="qrscanner">
+                    <video id="qr-video"></video>
+                    <canvas id="qr-canvas"></canvas>
+                    <div id="qr-result"></div>
+                  </div>
+                  <script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
+                  <script src="qrscanner.js"></script>
+                </div>
+              </div>
+
+              <div class="title">
+              </div>
+
+              <div class="button-wrap">
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#showQrCode"><i
+                    class="fas fa-qrcode me-2"></i>My QR Code</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="qr-code-section card bg-white border-0 p-0">
+      <div class="modal fade" id="showQrCode" tabindex="-1" aria-labelledby="showQrCodeLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header border-0 p-0 m-0">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-0">
+              <!-- section share own qr code  -->
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12 p-0">
+                    <div class="qr-code-wrap share-qr">
+                      <div class="m-auto">
+                        <div class="pay-logo">
+                          <img src="img/logo.png" alt="">
+                        </div>
+                        <div class="title">
+                          <h4 class="m-0">My QR Code</h4>
+                          <p>Scan your QR code to get Reward</p>
+                        </div>
+                        <div class="qr-code">
+                          <div class="qr">
+                            <div id="qrcode"></div>
+                          </div>
+                        </div>
+                        <div class="title">
+                          <h4 class="m-0 text-dark">Sandesh Chhetry</h4>
+                          <!-- <p>+977-9876543210</p> -->
+                          <span class="badge badge-primary">MuguPay Member</span>
+                        </div>
+                        <div class="button-wrap qr-buttons">
+                          <button class="btn btn-primary"><i class="fa-solid fa-download"></i>Download QR</button>
+                          <button class="btn btn-primary"><i class="fa-solid fa-share-nodes"></i> Share QR</button>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <!-- section share own qr code  -->
+    <!-- <section class="qr-code-section card bg-white border-0">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 p-0">
+            <div class="qr-code-wrap share-qr">
+              <div class="pay-logo">
+                <img src="img/logo.png" alt="">
+              </div>
+
+              <div class="title">
+                <h4 class="m-0">My QR Code</h4>
+                <p>Scan your QR code to get Reward</p>
+              </div>
+
+              <div class="qr-code">
+                <div class="qr">
+                  <div id="qrcode"></div>
+                </div>
+              </div>
+
+              <div class="title">
+                <h4 class="m-0 text-dark">Sandesh Chhetry</h4>
+                <p>+977-9876543210</p>
+              </div>
+
+              <div class="button-wrap qr-buttons">
+                <button class="btn btn-primary"><i class="fa-solid fa-download"></i>Download QR</button>
+                <button class="btn btn-primary"><i class="fa-solid fa-share-nodes"></i> Share QR</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <footer class="small-screen-footer">
+      <div class="container p-0">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="nav-menu">
+              <ul>
+                <li><a href="home.html"><i class="fas fa-home"></i> <span>Home</span></a></li>
+                <li><a href="rewards.html" class="active"><i class="fas fa-gift"></i> <span>Rewards</span></a></li>
+                <li><a href=""><i class="fas fa-credit-card"></i><span>Pocket</span></a></li>
+                <li><a href=""><i class="fas fa-history"></i><span>History</span></a></li>
+                <li><a href=""><i class="fas fa-trophy"></i><span>Leaderboard</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
+  <!-- <script src="js/jTimer.min.js"></script> -->
+  <!-- <script type="text/javascript" src="slick/slick.min.js"></script> -->
+  <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="js/slick.min.js"></script>
+
+  <script src="js/script.js"></script>
+  <script src="js/weather.js"></script>
+  <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+  <script src="js/pagescript.js"></script>
+  <script src="https://unpkg.com/react-icons/dist/react-icons.min.js"></script>
+
+</body>
+
+</html>
