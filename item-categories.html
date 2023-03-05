@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Bootstrap CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Fonts Style-->
+
+  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="fonts/fontawesome-free-6.1.1-web/css/all.css" />
+  <!--load all styles -->
+  <!-- <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" /> -->
+  <link rel="stylesheet" type="text/css" href="css/slick.css" />
+  <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
+  <link href="css/style.css" rel="stylesheet" />
+  <title>Mugu Pay | Features</title>
+</head>
+
+<body class="">
+  <header class="">
+    <nav class="navbar navbar-expand-lg fixed-top" id="header">
+      <div class="small-screen w-100">
+        <div class="container">
+          <div class="d-flex justify-content-between align-items-center w-100">
+            <a class="navbar-brand p-2" href="index.html"><img src="img/logo.png" alt="" />
+            </a>
+            <div class="text-white">
+              <a href="profile.html" class="text-white" style="font-size:24px;"><i class="far fa-user-circle"></i>
+                <span></span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- Header End -->
+  <div class="bg-gradient-primary cover-nav"></div>
+
+
+  <div class="small-screen body-sm">
+    <section class="filter position-sticky top-0 bg-light index-top p-3 pb-0 mb-0">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 p-0">
+            <form>
+              <div class="mb-3 icon-group">
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                  placeholder="Type here to find out your product">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+
+              <div class="checkbox-filter custom-scrollbar scrollbar-none mb-3">
+                <button type="button" class="btn btn-primary btn-filter" data-bs-toggle="modal"
+                  data-bs-target="#advanceFilter"><i class="fa-solid fa-filter me-2"></i>Filter</button>
+                <div class="form-group">
+                  <input type="checkbox" id="html">
+                  <label for="html">Lite</label>
+                </div>
+                <div class="form-group">
+                  <input type="checkbox" id="css">
+                  <label for="css">Top rated</label>
+                </div>
+                <div class="form-group">
+                  <input type="checkbox" id="top">
+                  <label for="top">top rated</label>
+                </div>
+                <div class="form-group">
+                  <input type="checkbox" id="delivery">
+                  <label for="delivery">Delivery</label>
+                </div>
+                <div class="form-group">
+                  <input type="checkbox" id="byeget">
+                  <label for="byeget">buy one get one</label>
+                </div>
+                <div class="form-group">
+                  <input type="checkbox" id="off">
+                  <label for="off">Percentage off</label>
+                </div>
+              </div>
+
+              <!-- advance filter popup -->
+              <div class="advance-filter">
+                <div class="modal fade" id="advanceFilter" tabindex="-1" aria-labelledby="advanceFilterLabel"
+                  aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered my-auto">
+                    <div class="modal-content">
+                      <div class="modal-header border-0 p-0 m-0">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body p-0 pb-5 scrollbar-none ">
+                        <div class="container">
+                          <div class="row">
+                            <div class="col-md-12 p-0">
+                              <div class="advance-filter-wrapper ">
+                                <div class="filter-option-wrap">
+                                  <h6>Sort By</h6>
+                                  <div class="filter-option">
+                                    <div class="form-group">
+                                      <input type="radio" id="nearest" name="radio-group" checked>
+                                      <label for="nearest">Nearest</label>
+                                    </div>
+                                    <div class="form-group">
+                                      <input type="radio" id="toprated" name="radio-group">
+                                      <label for="toprated">Top rated</label>
+                                    </div>
+                                    <div class="form-group">
+                                      <input type="radio" id="new" name="radio-group">
+                                      <label for="new">New</label>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="filter-option-wrap checkbox-wrap">
+                                  <h6>Offer type</h6>
+                                  <div class="filter-option">
+                                    <div class="form-group">
+                                      <input type="checkbox" id="buyget" checked>
+                                      <label for="buyget">Buy one get one</label>
+                                    </div>
+                                    <div class="form-group">
+                                      <input type="checkbox" id="takeaway">
+                                      <label for="takeaway">Takeaway</label>
+                                    </div>
+                                    <div class="form-group">
+                                      <input type="checkbox" id="newc" checked>
+                                      <label for="newc">New</label>
+                                    </div>
+                                    <div class="form-group">
+                                      <input type="checkbox" id="dine">
+                                      <label for="dine">Dine-in</label>
+                                    </div>
+                                    <div class="form-group">
+                                      <input type="checkbox" id="reservation">
+                                      <label for="reservation">Reservation</label>
+                                    </div>
+                                    <div class="form-group">
+                                      <input type="checkbox" id="percentate">
+                                      <label for="percentate">Percentate
+                                        off</label>
+                                    </div>
+                                    <div class="form-group">
+                                      <input type="checkbox" id="delivery1">
+                                      <label for="delivery1">Delivery</label>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="filter-option-wrap checkbox-wrap">
+                                  <h6>Food and Drinks</h6>
+                                  <div class="filter-option">
+                                    <div class="form-group">
+                                      <input type="checkbox" id="buyget">
+                                      <label for="buyget">Buy one get one</label>
+                                    </div>
+                                    <div class="form-group">
+                                      <input type="checkbox" id="takeaway">
+                                      <label for="takeaway">Takeaway</label>
+                                    </div>
+                                    <div class="form-group">
+                                      <input type="checkbox" id="newc">
+                                      <label for="newc">New</label>
+                                    </div>
+                                    <div class="form-group">
+                                      <input type="checkbox" id="dine">
+                                      <label for="dine">Dine-in</label>
+                                    </div>
+                                    <div class="form-group">
+                                      <input type="checkbox" id="reservation">
+                                      <label for="reservation">Reservation</label>
+                                    </div>
+                                    <div class="form-group">
+                                      <input type="checkbox" id="percentate">
+                                      <label for="percentate">Percentate
+                                        off</label>
+                                    </div>
+                                    <div class="form-group">
+                                      <input type="checkbox" id="delivery1">
+                                      <label for="delivery1">Delivery</label>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="result-show button-wrap">
+                        <button class="btn btn-secondary">Clear all</button>
+                        <button class="btn btn-primary">127 Results found</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="category-found card border-0 bg-transparent">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 p-0">
+            <div class="heading-title">
+              <h3>16 items found</h3>
+            </div>
+            <div class="card-cont-badge-wrap scrollbar-none">
+              <div class="card-cont-badge-list home-card-list w-100 ">
+                <a href="offers.html"></a>
+                <div class="camp-img card-img">
+                  <img src="img/food2.png" alt="card campaign kfc.jpg">
+                </div>
+                <div class="camp-cont card-cont">
+                  <div>
+                    <div>
+                      <h4 class="mb-0">Cold Drinking</h4>
+                      <span class="text-light font-sm">Sunny Winter</span>
+                    </div>
+                    <div>
+                    </div>
+                  </div>
+                  <div>
+                    <ul class="scrollbar-none">
+                      <li><span class="badge badge-secondary"><i class="fa-solid fa-tag"></i> Buy
+                          one Get one</span>
+                      </li>
+                      <li><span class="badge badge-secondary"><i class="fa-solid fa-tag"></i>Lite</span></li>
+                      <li><span class="badge badge-secondary"><i class="fa-solid fa-tag"></i>Delivery</span></li>
+                      <li><span class="badge badge-secondary"><i class="fa-solid fa-tag"></i> 20%
+                          off</span></li>
+                      <li><span class="badge badge-secondary"><i class="fa-solid fa-tag"></i>Free</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="card-cont-badge-list home-card-list w-100 ">
+                <a href="offers.html"></a>
+                <div class="camp-img card-img">
+                  <img src="img/food1.png" alt="card campaign kfc.jpg">
+                </div>
+                <div class="camp-cont card-cont">
+                  <div>
+                    <div>
+                      <h4 class="mb-0">Fooding</h4>
+                      <span class="text-light font-sm">Dinner Dishes</span>
+                    </div>
+                    <div>
+                    </div>
+                  </div>
+                  <div>
+                    <ul class="scrollbar-none">
+                      <li><span class="badge badge-secondary"><i class="fa-solid fa-tag"></i> Buy
+                          one Get one</span>
+                      </li>
+                      <li><span class="badge badge-secondary"><i class="fa-solid fa-tag"></i>Lite</span></li>
+                      <li><span class="badge badge-secondary"><i class="fa-solid fa-tag"></i>Delivery</span></li>
+                      <li><span class="badge badge-secondary"><i class="fa-solid fa-tag"></i> 20%
+                          off</span></li>
+                      <li><span class="badge badge-secondary"><i class="fa-solid fa-tag"></i>Free</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-cont-badge-list home-card-list w-100 ">
+                <a href="offers.html"></a>
+                <div class="camp-img card-img">
+                  <img src="img/food3.png" alt="card campaign kfc.jpg">
+                </div>
+                <div class="camp-cont card-cont">
+                  <div>
+                    <div>
+                      <h4 class="mb-0">Wine</h4>
+                      <span class="text-light font-sm">Funny Moment</span>
+                    </div>
+                    <div>
+                    </div>
+                  </div>
+                  <div>
+                    <ul class="scrollbar-none">
+                      <li><span class="badge badge-secondary"><i class="fa-solid fa-tag"></i> Buy
+                          one Get one</span>
+                      </li>
+                      <li><span class="badge badge-secondary"><i class="fa-solid fa-tag"></i>Lite</span></li>
+                      <li><span class="badge badge-secondary"><i class="fa-solid fa-tag"></i>Delivery</span></li>
+                      <li><span class="badge badge-secondary"><i class="fa-solid fa-tag"></i> 20%
+                          off</span></li>
+                      <li><span class="badge badge-secondary"><i class="fa-solid fa-tag"></i>Free</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="card-cont-badge-list home-card-list w-100 ">
+                <a href="offers.html"></a>
+                <div class="camp-img card-img">
+                  <img src="img/food4.png" alt="card campaign kfc.jpg">
+                </div>
+                <div class="camp-cont card-cont">
+                  <div>
+                    <div>
+                      <h4 class="mb-0">MO:MO</h4>
+                      <span class="text-light font-sm">Teasty Tiffin</span>
+                    </div>
+                    <div>
+                    </div>
+                  </div>
+                  <div>
+                    <ul class="scrollbar-none">
+                      <li><span class="badge badge-secondary"><i class="fa-solid fa-tag"></i> Buy
+                          one Get one</span>
+                      </li>
+                      <li><span class="badge badge-secondary"><i class="fa-solid fa-tag"></i>Lite</span></li>
+                      <li><span class="badge badge-secondary"><i class="fa-solid fa-tag"></i>Delivery</span></li>
+                      <li><span class="badge badge-secondary"><i class="fa-solid fa-tag"></i> 20%
+                          off</span></li>
+                      <li><span class="badge badge-secondary"><i class="fa-solid fa-tag"></i>Free</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="card-cont-badge-list home-card-list w-100 ">
+                <a href="offers.html"></a>
+                <div class="camp-img card-img">
+                  <img src="img/food2.png" alt="card campaign kfc.jpg">
+                </div>
+                <div class="camp-cont card-cont">
+                  <div>
+                    <div>
+                      <h4 class="mb-0">Cold Drinking</h4>
+                      <span class="text-light font-sm">Sunny Winter</span>
+                    </div>
+                    <div>
+                    </div>
+                  </div>
+                  <div>
+                    <ul class="scrollbar-none">
+                      <li><span class="badge badge-secondary"><i class="fa-solid fa-tag"></i> Buy
+                          one Get one</span>
+                      </li>
+                      <li><span class="badge badge-secondary"><i class="fa-solid fa-tag"></i>Lite</span></li>
+                      <li><span class="badge badge-secondary"><i class="fa-solid fa-tag"></i>Delivery</span></li>
+                      <li><span class="badge badge-secondary"><i class="fa-solid fa-tag"></i> 20%
+                          off</span></li>
+                      <li><span class="badge badge-secondary"><i class="fa-solid fa-tag"></i>Free</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="card-cont-badge-list home-card-list w-100 ">
+                <a href="offers.html"></a>
+                <div class="camp-img card-img">
+                  <img src="img/food1.png" alt="card campaign kfc.jpg">
+                </div>
+                <div class="camp-cont card-cont">
+                  <div>
+                    <div>
+                      <h4 class="mb-0">Fooding</h4>
+                      <span class="text-light font-sm">Dinner Dishes</span>
+                    </div>
+                    <div>
+                    </div>
+                  </div>
+                  <div>
+                    <ul class="scrollbar-none">
+                      <li><span class="badge badge-secondary"><i class="fa-solid fa-tag"></i> Buy
+                          one Get one</span>
+                      </li>
+                      <li><span class="badge badge-secondary"><i class="fa-solid fa-tag"></i>Lite</span></li>
+                      <li><span class="badge badge-secondary"><i class="fa-solid fa-tag"></i>Delivery</span></li>
+                      <li><span class="badge badge-secondary"><i class="fa-solid fa-tag"></i> 20%
+                          off</span></li>
+                      <li><span class="badge badge-secondary"><i class="fa-solid fa-tag"></i>Free</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-cont-badge-list home-card-list w-100 ">
+                <a href="offers.html"></a>
+                <div class="camp-img card-img">
+                  <img src="img/food3.png" alt="card campaign kfc.jpg">
+                </div>
+                <div class="camp-cont card-cont">
+                  <div>
+                    <div>
+                      <h4 class="mb-0">Wine</h4>
+                      <span class="text-light font-sm">Funny Moment</span>
+                    </div>
+                    <div>
+                    </div>
+                  </div>
+                  <div>
+                    <ul class="scrollbar-none">
+                      <li><span class="badge badge-secondary"><i class="fa-solid fa-tag"></i> Buy
+                          one Get one</span>
+                      </li>
+                      <li><span class="badge badge-secondary"><i class="fa-solid fa-tag"></i>Lite</span></li>
+                      <li><span class="badge badge-secondary"><i class="fa-solid fa-tag"></i>Delivery</span></li>
+                      <li><span class="badge badge-secondary"><i class="fa-solid fa-tag"></i> 20%
+                          off</span></li>
+                      <li><span class="badge badge-secondary"><i class="fa-solid fa-tag"></i>Free</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="card-cont-badge-list home-card-list w-100 ">
+                <a href="offers.html"></a>
+                <div class="camp-img card-img">
+                  <img src="img/food4.png" alt="card campaign kfc.jpg">
+                </div>
+                <div class="camp-cont card-cont">
+                  <div>
+                    <div>
+                      <h4 class="mb-0">MO:MO</h4>
+                      <span class="text-light font-sm">Teasty Tiffin</span>
+                    </div>
+                    <div>
+                    </div>
+                  </div>
+                  <div>
+                    <ul class="scrollbar-none">
+                      <li><span class="badge badge-secondary"><i class="fa-solid fa-tag"></i> Buy
+                          one Get one</span>
+                      </li>
+                      <li><span class="badge badge-secondary"><i class="fa-solid fa-tag"></i>Lite</span></li>
+                      <li><span class="badge badge-secondary"><i class="fa-solid fa-tag"></i>Delivery</span></li>
+                      <li><span class="badge badge-secondary"><i class="fa-solid fa-tag"></i> 20%
+                          off</span></li>
+                      <li><span class="badge badge-secondary"><i class="fa-solid fa-tag"></i>Free</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="small-screen-footer">
+      <div class="container p-0">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="nav-menu">
+              <ul>
+                <li><a href="home.html" class="active"><i class="fas fa-home"></i> <span>Home</span></a>
+                </li>
+                <li><a href="rewards.html"><i class="fas fa-gift"></i> <span>Rewards</span></a></li>
+                <!-- <li><a href=""><i class="fas fa-map-marker-alt"></i> <span>Near Me</span></a></li> -->
+                <li><a href="redeem.html"><i class="fas fa-credit-card"></i><span>Redeem</span></a></li>
+                <li><a href="history.html"><i class="fas fa-history"></i><span>History</span></a></li>
+                <li><a href=""><i class="fas fa-trophy"></i><span>Leaderboard</span></a></li>
+                <!-- <li><a href=""><i class="far fa-user-circle"></i> <span>Account</span></a></li> -->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
+  <!-- <script src="js/jTimer.min.js"></script> -->
+  <!-- <script type="text/javascript" src="slick/slick.min.js"></script> -->
+  <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="js/slick.min.js"></script>
+
+  <script src="js/script.js"></script>
+  <script src="js/weather.js"></script>
+  <script src="js/pagescript.js"></script>
+  <script src="https://unpkg.com/react-icons/dist/react-icons.min.js"></script>
+</body>
+
+</html>

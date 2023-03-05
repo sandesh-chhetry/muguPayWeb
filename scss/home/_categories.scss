@@ -1,0 +1,22 @@
+.category-found {
+    .card-cont {
+        ul {
+            justify-content: flex-start;
+            display: inline-flex;
+            overflow-x: scroll;
+            flex-wrap: nowrap;
+            max-width: 340px;
+            min-width: 100% !important;
+            gap: 10px;
+            position: relative;
+            z-index: 3;
+        }
+    }
+    .card-cont-badge-list.home-card-list{
+        margin: 12px 0px;
+        ul{
+          display: flex !important;
+          flex-wrap: wrap !important;
+        }
+    }
+}

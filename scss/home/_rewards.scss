@@ -1,0 +1,90 @@
+.reward-section {
+    // background: $primary;
+    // background: linear-gradient(24deg, #44106bee 35%, #d71b5fee 120%) !important;
+    padding: 16px !important;
+    color: $body-color;
+    background-repeat: no-repeat ;
+    background-size: cover;
+    background: $white !important;
+    .reward-info {
+        p {}
+        h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin: 12px 0px;
+        }
+    }
+    .point-badge-status {
+        padding: 10px 0px;
+        .hexagon {
+            height: 60px;
+            width: 60px;
+            flex: 60px 0 0;
+            overflow: hidden;
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+    .progress-wrap {
+        width: 100%;
+        h6{
+          font-size: 14px;
+          font-weight: 600;
+          margin-bottom: 4px;
+          i{
+            font-size: 12px;
+          }
+          span{
+            font-size: 12px;
+            font-weight: 500;
+          }
+        }
+        p{
+          font-size: 12px;
+        }
+        .progress {
+            height: 10px;
+            border-radius: 10px;
+            font-size: 8px;
+            padding: 2px 2px;
+            .progress-bar{
+              border-radius: 10px;
+              background: linear-gradient(24deg, $secondary 35%, $primary 120%) !important;
+            }
+        }
+    }
+}
+
+#hexagon {
+    width: 100px;
+    height: 57.735px;
+    background: red;
+    position: relative;
+}
+
+#hexagon::before {
+    content: "";
+    position: absolute;
+    top: -28.8675px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 28.8675px solid red;
+}
+
+#hexagon::after {
+    content: "";
+    position: absolute;
+    bottom: -28.8675px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 28.8675px solid red;
+}

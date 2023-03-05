@@ -1,5 +1,6 @@
 @import 'variables';
 @import 'header';
+@import 'login';
 @import 'contact';
 @import 'sub-header';
 @import 'giftpay';
@@ -19,7 +20,7 @@
 // profile and overview part style
 @import 'home/home';
 
-// @import 'responsive';
+@import 'responsive';
 * {
     margin: 0;
     padding: 0;

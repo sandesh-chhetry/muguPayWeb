@@ -1,0 +1,112 @@
+.offers {
+    .offers-wrapper {
+        .offers-list-wrapper {
+            padding-top: 16px;
+            h6 {
+                margin: 0;
+                font-size: 14px;
+            }
+            .offer-list {
+                display: flex;
+                position: relative;
+                border-radius: 4px;
+                margin: 16px 0px;
+                .offer-left {
+                    padding: 8px;
+                    width: 80px;
+                    flex: 80px 0 0;
+                    overflow: hidden;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    img {
+                        height: 100%;
+                        width: 100%;
+                        object-fit: contain;
+                    }
+                    h2 {
+                        text-align: center;
+                        margin: 0;
+                        font-size: 20px;
+                        line-height: 20px;
+                    }
+                }
+                .offer-right {
+                    padding: 12px;
+                    h4 {
+                        font-size: 16px;
+                        margin: 0;
+                        line-height: 20px;
+                        span {
+                            // color: $secondary;
+                            font-weight: 700;
+                        }
+                    }
+                    P {
+                        line-height: 20px;
+                        margin: 0;
+                    }
+
+                    .date{
+                        margin-top: 5px;
+                        i{
+                            margin-right: 6px;
+                            font-size: 12px;
+                        }
+                    }
+                }
+                &::before,
+                &::after {
+                    position: absolute;
+                    content: "";
+                    width: 16px;
+                    height: 10px;
+                    background-color: #ffffff;
+                    margin-top: -9px;
+                    // top: 50%;
+                    left: 80px;
+                    margin-left: -9px;
+                }
+                &::before {
+                    border-radius: 0 0 12rem 12rem;
+                    top: 7px;
+                }
+                &::after {
+                    border-radius: 12rem 12rem  0 0;
+                    bottom: -1px;
+                }
+            }
+            &.offer-unlocked {
+                .offer-list {
+                    background: $primary;
+                    .offer-left {
+                        border-right: 2px dashed $white;
+                        h2 {
+                            color: $white;
+                        }
+                    }
+                }
+                .offer-right {
+                    color: #fff;
+                    h4 {
+                        span {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+            &.offer-locked {
+                .offer-list {
+                    background: #e0e0e0;
+                    .offer-left {
+                        border-right: 2px dashed #6a6a6a;
+                        h2 {
+                            color: #6a6a6a;
+                        }
+                    }
+                    .offer-right {}
+                }
+            }
+        }
+    }
+}

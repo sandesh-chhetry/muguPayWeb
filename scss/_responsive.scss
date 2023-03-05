@@ -1,13 +1,161 @@
 /*----------------------------------------*/
+
+
 /*  Responsive Css
 /*----------------------------------------*/
-@media #{$desktop-device}{
-    
-}
-@media #{$small-mobile}{
+
+@media #{$desktop-device} {}
+
+@media #{$small-mobile} {
     .sub-header {
         .time-column {
             display: none;
         }
-    }   
+    }
+}
+
+@media #{$large-mobile} {
+    section {
+        padding: 20px 0px !important;
+    }
+    .section-first {
+        margin-top: -20px;
+    }
+    .hero-section {
+        padding: 0px !important;
+    }
+    .carousel .carousel-item .carousel-caption h5 span {
+        font-size: 26px;
+        line-height: 36px;
+    }
+    .carousel .carousel-inner {
+        min-height: 450px;
+        padding: 16px 0px;
+    }
+    .carousel::before {
+        display: none;
+    }
+    .heading-title {
+        text-align: left !important;
+        p {
+            width: 100% !important;
+            // padding: 0px !important;
+            text-align: left !important;
+            font-size: 16px !important;
+        }
+    }
+    .giftpay-list {
+        .primaryDiv {
+            width: 100% !important;
+            margin: 8px 0px !important;
+        }
+    }
+    .image-mobile {
+        img {
+            object-fit: contain;
+            height: 300px !important;
+        }
+    }
+    .mugupay-section .giftpay-list .secondaryDiv:before {
+        left: 0;
+        top: 0;
+    }
+    .about-content {
+        width: 100% !important;
+        padding: 16px 0px !important;
+    }
+    .p-large {
+        padding: 20px 0px !important;
+    }
+    .about-right-img {
+        display: none;
+    }
+    .nav-pills .nav-item .nav-link, .filter .checkbox-filter .form-group label {
+        padding: 8px 16px !important;
+        align-items: center;
+        .point-icon {
+            height: 30px !important;
+            width: 30px !important;
+        }
+        h2 {
+            font-size: 18px !important;
+            margin: 0 !important;
+            span {
+                display: none !important;
+            }
+        }
+    }
+    .image-section {
+        padding: 16px;
+        .image-content {
+            img {
+                height: 140px;
+                right: 0;
+                position: absolute;
+                bottom: 0;
+            }
+            .btn-wrapper {
+                text-align: center;
+            }
+        }
+    }
+    .promotion .promotion-content h3 {
+        font-size: 24px !important;
+    }
+    .promotion .promotion-content h2 {
+        font-size: 50px !important;
+        sub {
+            font-size: 25px !important;
+        }
+    }
+    .faq-section .nav-pills {
+        flex-direction: row !important;
+        gap: 0px !important;
+        justify-content: center;
+        a {
+            display: none;
+        }
+    }
+    .reward-partner .reward-partner-wrapper .card-list {
+        padding: 16px;
+    }
+    .reward-partner-wrapper {
+        .col-md-4 {
+            margin: 8px 0px;
+        }
+    }
+    .footer {
+        text-align: center;
+    }
+    .download-btns .btn-link h2 {
+        font-size: 16px !important;
+    }
+    header .navbar.header-scrolled a {
+        color: #fff !important;
+    }
+    .carousel .carousel-item .hero-image {
+        display: none;
+    }
+    .carousel .carousel-item .carousel-caption .form-wrapper form .form-group .btn {
+        position: initial;
+        width: 100%;
+        margin-top: 12px;
+    }
+}
+
+.download-btns {
+    position: relative;
+    z-index: 3;
+}
+
+.navbar-toggler-icon {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    span {
+        height: 3px;
+        border-radius: 5px;
+        width: 100%;
+        background: $white;
+    }
 }
