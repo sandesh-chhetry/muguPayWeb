@@ -129,7 +129,6 @@ $(document).ready(function() {
 // Generate a random string of text
 // var text = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
 var text = "random text to generate QR code of Account";
-
 // Create a new QR code instance with the generated text
 var qrcode = new QRCode(document.getElementById("qrcode"), {
     text: text,
