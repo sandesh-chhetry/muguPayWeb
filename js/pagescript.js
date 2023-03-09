@@ -164,7 +164,17 @@ scanner.addListener('scan', function(content) {
 // Start the scanner
 Instascan.Camera.getCameras().then(function(cameras) {
     if (cameras.length > 0) {
-        scanner.start(cameras[0]);
+        // Find the back camera
+        var backCam = cameras.find(function(cam) {
+            return cam.name.indexOf('back') !== -1;
+        });
+        // If back camera is found, start the scanner with it
+        if (backCam) {
+            scanner.start(backCam);
+        } else {
+            // If no back camera is found, start the scanner with the first available camera
+            scanner.start(cameras[0]);
+        }
     } else {
         console.error('No cameras found.');
     }
@@ -191,5 +201,3 @@ setInterval(function() {
         result.style.display = 'block';
     }
 }, 1000 / 30);
-
-
