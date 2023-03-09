@@ -1159,7 +1159,8 @@ header .appointment-btn {
     width: 100%;
     bottom: 0;
     left: 0;
-    transform: rotate(0deg); } }
+    transform: rotate(0deg);
+    background: #44106b; } }
 /*----------------------------------------*/
 /*  03. About CSS
 /*----------------------------------------*/
@@ -1965,6 +1966,9 @@ blockquote {
   .small-screen .font-sm {
     font-size: 14px; }
 
+.h-full-vh {
+  height: 100vh; }
+
 .text-light {
   color: #999999 !important; }
 
@@ -2168,9 +2172,10 @@ blockquote {
       position: absolute;
       top: -8px;
       right: 12px;
-      background: linear-gradient(90deg, #44106b, #d71b5f) !important;
+      background: #e6e6e6;
+      color: #333;
       border-radius: 2px;
-      font-weight: 400;
+      font-weight: 600;
       display: flex;
       align-items: center; }
       .home-card-list .card-cont .badge-time i {
@@ -2180,7 +2185,7 @@ blockquote {
         position: absolute;
         top: 0;
         border-style: solid;
-        border-color: transparent transparent #d71b5f transparent;
+        border-color: transparent transparent #e6e6e6 transparent;
         z-index: 9;
         opacity: .7; }
       .home-card-list .card-cont .badge-time::after {
@@ -2202,7 +2207,7 @@ blockquote {
       margin-top: 5px; }
     .home-card-list .card-cont .badge-secondary {
       color: #000;
-      background: #ffbe61;
+      background: #faca51;
       font-weight: 400; }
   .home-card-list a {
     position: absolute;
@@ -2501,12 +2506,6 @@ blockquote {
         color: #999999;
         font-size: 12px;
         margin: 0; }
-    .qr-code-section .qr-code-wrap .qr-code {
-      height: 200px;
-      width: 200px;
-      margin: auto; }
-      .qr-code-section .qr-code-wrap .qr-code .qr {
-        height: 100%; }
   .qr-code-section .modal-content {
     height: calc(100vh);
     overflow: hidden; }
@@ -2523,6 +2522,13 @@ blockquote {
     .qr-code-section .modal-content::before {
       right: -25%;
       bottom: -40%; }
+
+.qr-code {
+  height: 200px;
+  width: 200px;
+  margin: auto; }
+  .qr-code .qr {
+    height: 100%; }
 
 .btn-close {
   position: absolute;
@@ -2864,17 +2870,17 @@ blockquote {
   border-width: 0 2px 2px 0;
   transform: rotate(45deg); }
 
-.offers .offers-wrapper .offers-list-wrapper {
+.offers-wrapper .offers-list-wrapper {
   padding-top: 16px; }
-  .offers .offers-wrapper .offers-list-wrapper h6 {
+  .offers-wrapper .offers-list-wrapper h6 {
     margin: 0;
     font-size: 14px; }
-  .offers .offers-wrapper .offers-list-wrapper .offer-list {
+  .offers-wrapper .offers-list-wrapper .offer-list {
     display: flex;
     position: relative;
     border-radius: 4px;
     margin: 16px 0px; }
-    .offers .offers-wrapper .offers-list-wrapper .offer-list .offer-left {
+    .offers-wrapper .offers-list-wrapper .offer-list .offer-left {
       padding: 8px;
       width: 80px;
       flex: 80px 0 0;
@@ -2882,32 +2888,36 @@ blockquote {
       display: flex;
       justify-content: center;
       align-items: center; }
-      .offers .offers-wrapper .offers-list-wrapper .offer-list .offer-left img {
+      .offers-wrapper .offers-list-wrapper .offer-list .offer-left img {
         height: 100%;
         width: 100%;
         object-fit: contain; }
-      .offers .offers-wrapper .offers-list-wrapper .offer-list .offer-left h2 {
+      .offers-wrapper .offers-list-wrapper .offer-list .offer-left h2 {
         text-align: center;
         margin: 0;
         font-size: 20px;
         line-height: 20px; }
-    .offers .offers-wrapper .offers-list-wrapper .offer-list .offer-right {
-      padding: 12px; }
-      .offers .offers-wrapper .offers-list-wrapper .offer-list .offer-right h4 {
+    .offers-wrapper .offers-list-wrapper .offer-list .offer-right {
+      padding: 12px;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      align-items: center; }
+      .offers-wrapper .offers-list-wrapper .offer-list .offer-right h4 {
         font-size: 16px;
         margin: 0;
         line-height: 20px; }
-        .offers .offers-wrapper .offers-list-wrapper .offer-list .offer-right h4 span {
+        .offers-wrapper .offers-list-wrapper .offer-list .offer-right h4 span {
           font-weight: 700; }
-      .offers .offers-wrapper .offers-list-wrapper .offer-list .offer-right P {
+      .offers-wrapper .offers-list-wrapper .offer-list .offer-right P {
         line-height: 20px;
         margin: 0; }
-      .offers .offers-wrapper .offers-list-wrapper .offer-list .offer-right .date {
+      .offers-wrapper .offers-list-wrapper .offer-list .offer-right .date {
         margin-top: 5px; }
-        .offers .offers-wrapper .offers-list-wrapper .offer-list .offer-right .date i {
+        .offers-wrapper .offers-list-wrapper .offer-list .offer-right .date i {
           margin-right: 6px;
           font-size: 12px; }
-    .offers .offers-wrapper .offers-list-wrapper .offer-list::before, .offers .offers-wrapper .offers-list-wrapper .offer-list::after {
+    .offers-wrapper .offers-list-wrapper .offer-list::before, .offers-wrapper .offers-list-wrapper .offer-list::after {
       position: absolute;
       content: "";
       width: 16px;
@@ -2916,28 +2926,184 @@ blockquote {
       margin-top: -9px;
       left: 80px;
       margin-left: -9px; }
-    .offers .offers-wrapper .offers-list-wrapper .offer-list::before {
+    .offers-wrapper .offers-list-wrapper .offer-list::before {
       border-radius: 0 0 12rem 12rem;
       top: 7px; }
-    .offers .offers-wrapper .offers-list-wrapper .offer-list::after {
-      border-radius: 12rem 12rem  0 0;
+    .offers-wrapper .offers-list-wrapper .offer-list::after {
+      border-radius: 12rem 12rem 0 0;
       bottom: -1px; }
-  .offers .offers-wrapper .offers-list-wrapper.offer-unlocked .offer-list {
+  .offers-wrapper .offers-list-wrapper.offer-unlocked .offer-list {
     background: #d71b5f; }
-    .offers .offers-wrapper .offers-list-wrapper.offer-unlocked .offer-list .offer-left {
+    .offers-wrapper .offers-list-wrapper.offer-unlocked .offer-list .offer-left {
       border-right: 2px dashed #ffffff; }
-      .offers .offers-wrapper .offers-list-wrapper.offer-unlocked .offer-list .offer-left h2 {
+      .offers-wrapper .offers-list-wrapper.offer-unlocked .offer-list .offer-left h2 {
         color: #ffffff; }
-  .offers .offers-wrapper .offers-list-wrapper.offer-unlocked .offer-right {
+  .offers-wrapper .offers-list-wrapper.offer-unlocked .offer-right {
     color: #fff; }
-    .offers .offers-wrapper .offers-list-wrapper.offer-unlocked .offer-right h4 span {
+    .offers-wrapper .offers-list-wrapper.offer-unlocked .offer-right h4 span {
       color: #fff; }
-  .offers .offers-wrapper .offers-list-wrapper.offer-locked .offer-list {
+  .offers-wrapper .offers-list-wrapper.offer-locked .offer-list {
     background: #e0e0e0; }
-    .offers .offers-wrapper .offers-list-wrapper.offer-locked .offer-list .offer-left {
+    .offers-wrapper .offers-list-wrapper.offer-locked .offer-list .offer-left {
       border-right: 2px dashed #6a6a6a; }
-      .offers .offers-wrapper .offers-list-wrapper.offer-locked .offer-list .offer-left h2 {
+      .offers-wrapper .offers-list-wrapper.offer-locked .offer-list .offer-left h2 {
         color: #6a6a6a; }
+
+.modal-redeem-redeem .modal-content {
+  padding: 30px 20px 12px 20px; }
+.modal-redeem-redeem .modal-body {
+  overflow-y: scroll; }
+
+.redeem-criteria-wrapper .redeem-desc .merchant-image {
+  height: 80px;
+  width: 80px;
+  flex: 80px 0 0;
+  border: 1px solid #ccc;
+  padding: 2px;
+  margin: auto;
+  border-radius: 4px; }
+  .redeem-criteria-wrapper .redeem-desc .merchant-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain; }
+.redeem-criteria-wrapper .redeem-desc h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 16px; }
+.redeem-criteria-wrapper .redeem-method {
+  padding: 20px 0px; }
+  .redeem-criteria-wrapper .redeem-method .title h4 {
+    color: initial !important;
+    font-size: 18px; }
+  .redeem-criteria-wrapper .redeem-method .title p {
+    color: initial !important; }
+  .redeem-criteria-wrapper .redeem-method .checkout-coupen {
+    background: #d71b5f;
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 24px 24px;
+    position: relative; }
+    .redeem-criteria-wrapper .redeem-method .checkout-coupen::before, .redeem-criteria-wrapper .redeem-method .checkout-coupen::after {
+      position: absolute;
+      content: "";
+      width: 12px;
+      height: 18px;
+      background-color: #ffffff;
+      margin-top: -9px;
+      top: 50%; }
+    .redeem-criteria-wrapper .redeem-method .checkout-coupen::before {
+      border-radius: 12rem 0 0 12rem;
+      right: -1px; }
+    .redeem-criteria-wrapper .redeem-method .checkout-coupen::after {
+      border-radius: 0 12rem 12rem 0;
+      left: -1px; }
+    .redeem-criteria-wrapper .redeem-method .checkout-coupen .saving {
+      border-bottom: 2px dashed #fff; }
+      .redeem-criteria-wrapper .redeem-method .checkout-coupen .saving h4 {
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 4px; }
+
+.pin-input .title {
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+  font-family: "Poppins", sans-serif; }
+  .pin-input .title h3 {
+    font-weight: bold; }
+  .pin-input .title p {
+    font-size: 12px;
+    color: #118a44; }
+    .pin-input .title p.msg {
+      color: initial;
+      text-align: initial;
+      font-weight: bold; }
+.pin-input .otp-input-fields {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  gap: 10px; }
+  .pin-input .otp-input-fields input {
+    height: 40px;
+    width: 40px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    border: 1px solid #ffffff;
+    text-align: center;
+    outline: none;
+    font-size: 16px;
+    /* Firefox */ }
+    .pin-input .otp-input-fields input::-webkit-outer-spin-button, .pin-input .otp-input-fields input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0; }
+    .pin-input .otp-input-fields input[type=number] {
+      -moz-appearance: textfield; }
+    .pin-input .otp-input-fields input:focus {
+      border-width: 2px;
+      border-color: #d71b5f; }
+.pin-input .result {
+  max-width: 400px;
+  margin: auto;
+  padding: 24px;
+  text-align: center; }
+  .pin-input .result p {
+    font-size: 24px;
+    font-family: 'Antonio', sans-serif;
+    opacity: 1;
+    transition: color 0.5s ease; }
+    .pin-input .result p._ok {
+      color: green; }
+    .pin-input .result p._notok {
+      color: red;
+      border-radius: 3px; }
+
+.redeem-notices .date {
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 12px; }
+.redeem-notices p {
+  margin-bottom: 0px; }
+  .redeem-notices p i {
+    font-size: 12px;
+    margin-right: 6px; }
+
+.btn-collect-offer {
+  background: #fff;
+  height: fit-content;
+  border-radius: 50px;
+  padding: 1px 10px !important;
+  right: 6px;
+  top: 6px;
+  font-size: 12px !important;
+  margin-left: 5px !important; }
+
+.merchant .card-img {
+  padding: 4px;
+  padding-bottom: 0px; }
+  .merchant .card-img img {
+    object-fit: contain; }
+.merchant .card-cont {
+  display: none; }
+
+.merchant-card-wrap .card-img {
+  border: 1px solid #ccc;
+  padding: 2px; }
+  .merchant-card-wrap .card-img img {
+    object-fit: contain; }
+.merchant-card-wrap .card-cont h4 {
+  display: block !important; }
+.merchant-card-wrap .card-cont p {
+  font-size: 12px;
+  line-height: 12px !important;
+  margin-bottom: 0; }
+  .merchant-card-wrap .card-cont p i {
+    font-size: 10px;
+    margin-right: 6px; }
+
+.rating span i {
+  font-size: 12px;
+  color: #faca51; }
 
 /*----------------------------------------*/
 /*  Responsive Css

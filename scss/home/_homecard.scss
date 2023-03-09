@@ -53,11 +53,14 @@
                     position: absolute;
                     top: -8px;
                     right: 12px;
-                    background: linear-gradient(90deg, $secondary, $primary) !important;
+                    // background: linear-gradient(90deg, $secondary, $primary) !important;
+                    background: #e6e6e6;
+                    color: #333;
                     border-radius: 2px;
-                    font-weight: 400;
+                    font-weight: 600;
                     display: flex;
                     align-items: center;
+
                     i {
                         font-size: 8px;
                     }
@@ -67,7 +70,7 @@
                         position: absolute;
                         top: 0;
                         border-style: solid;
-                        border-color: transparent transparent $primary transparent;
+                        border-color: transparent transparent #e6e6e6 transparent;
                         z-index: 9;
                         opacity: .7;
                     }
@@ -95,7 +98,7 @@
                 }
                 .badge-secondary {
                     color: #000;
-                    background: #ffbe61;
+                    background: $rating;
                     font-weight: 400;
                 }
             }
@@ -374,26 +377,24 @@
                 }
             }
         }
-
-
-        .redeem-section{
-           .card-cont{
-            h4{
-                font-size: 12px;
+        
+        .redeem-section {
+            .card-cont {
+                h4 {
+                    font-size: 12px;
+                }
+                p {
+                    font-size: 10px;
+                    line-height: 12px;
+                }
             }
-            p{
-                font-size: 10px;
-                line-height: 12px;
-            }
-           }
-
         }
-
-        .time-money{
+        
+        .time-money {
             font-size: 12px !important;
             margin: 0 !important;
             // line-height: 17px !important;
-            i{
+            i {
                 font-size: 10px;
             }
         }
