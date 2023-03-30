@@ -1406,9 +1406,11 @@ blockquote {
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 40px 0 20px 0;
+  padding: 40px 40px;
   position: relative;
-  height: 100%; }
+  height: 100%;
+  background: #fff;
+  border-radius: 6px; }
   .service-list-wrap .service-item .icon {
     width: 50px;
     height: 50px;
@@ -1679,9 +1681,9 @@ blockquote {
 .earn-redeem-point {
   position: relative; }
   .earn-redeem-point .service-item .icon {
-    width: 80px;
-    height: 80px;
-    flex: 80px 0 0; }
+    width: 70px;
+    height: 70px;
+    flex: 70px 0 0; }
 
 .nav-pills {
   justify-content: center; }
@@ -1696,6 +1698,8 @@ blockquote {
       font-size: 20px;
       font-weight: 600;
       text-align: left; }
+      .nav-pills .nav-item .nav-link h2 strong {
+        font-weight: inherit; }
       .nav-pills .nav-item .nav-link h2 span {
         display: block;
         font-size: 12px;
@@ -3145,7 +3149,8 @@ blockquote {
 
   .image-mobile img {
     object-fit: contain;
-    height: 300px !important; }
+    width: 80%;
+    height: auto; }
 
   .mugupay-section .giftpay-list .secondaryDiv:before {
     left: 0;
@@ -3161,16 +3166,22 @@ blockquote {
   .about-right-img {
     display: none; }
 
-  .nav-pills .nav-item .nav-link, .filter .checkbox-filter .form-group label {
+  .nav-pills .nav-item .nav-link,
+  .filter .checkbox-filter .form-group label {
     padding: 8px 16px !important;
     align-items: center; }
-    .nav-pills .nav-item .nav-link .point-icon, .filter .checkbox-filter .form-group label .point-icon {
-      height: 30px !important;
-      width: 30px !important; }
-    .nav-pills .nav-item .nav-link h2, .filter .checkbox-filter .form-group label h2 {
-      font-size: 18px !important;
+    .nav-pills .nav-item .nav-link .point-icon,
+    .filter .checkbox-filter .form-group label .point-icon {
+      height: 22px !important;
+      width: 22px !important; }
+    .nav-pills .nav-item .nav-link h2,
+    .filter .checkbox-filter .form-group label h2 {
+      font-size: 16px !important;
       margin: 0 !important; }
-      .nav-pills .nav-item .nav-link h2 span, .filter .checkbox-filter .form-group label h2 span {
+      .nav-pills .nav-item .nav-link h2 span,
+      .nav-pills .nav-item .nav-link h2 strong,
+      .filter .checkbox-filter .form-group label h2 span,
+      .filter .checkbox-filter .form-group label h2 strong {
         display: none !important; }
 
   .image-section {
@@ -3248,6 +3259,9 @@ body {
 
 .bg-white {
   background-color: #ffffff; }
+
+.bg-grey {
+  background: #f2f2f2; }
 
 .font-weight-bold {
   font-weight: 800; }

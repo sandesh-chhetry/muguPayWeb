@@ -53,7 +53,8 @@
     .image-mobile {
         img {
             object-fit: contain;
-            height: 300px !important;
+            width: 80%;
+            height: auto;
         }
     }
     .mugupay-section .giftpay-list .secondaryDiv:before {
@@ -70,17 +71,19 @@
     .about-right-img {
         display: none;
     }
-    .nav-pills .nav-item .nav-link, .filter .checkbox-filter .form-group label {
+    .nav-pills .nav-item .nav-link,
+    .filter .checkbox-filter .form-group label {
         padding: 8px 16px !important;
         align-items: center;
         .point-icon {
-            height: 30px !important;
-            width: 30px !important;
+            height: 22px !important;
+            width: 22px !important;
         }
         h2 {
-            font-size: 18px !important;
+            font-size: 16px !important;
             margin: 0 !important;
-            span {
+            span,
+            strong {
                 display: none !important;
             }
         }
