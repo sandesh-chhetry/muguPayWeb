@@ -40,7 +40,7 @@
                 font-size: 20px;
                 font-weight: 600;
                 text-align: left;
-                strong{
+                strong {
                     font-weight: inherit;
                 }
                 span {
@@ -125,11 +125,27 @@
     animation-delay: 1s;
 }
 
-// .earn-redeem-point.grid-design {
-//     .service-list-wrap {
-//         .row {
-//             display: grid;
-//             grid-template-columns: repeat(5, minmax(0, 1fr));
-//         }
-//     }
-// }
+.earn-redeem-point.grid-design {
+    .service-list-wrap {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 16px;
+        .service-item {
+            background: transparent;
+            padding: 10px 10px;
+            border: 1px solid #b8b8b8;
+            .service-content {
+                padding-top: 10px;
+                h2 {
+                    a {
+                        font-size: 18px;
+                        font-weight: 500;
+                    }
+                }
+            }
+            .icon{
+                margin: 0;
+            }
+        }
+    }
+}

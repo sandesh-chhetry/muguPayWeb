@@ -1757,6 +1757,22 @@ blockquote {
 .order06 {
   animation-delay: 1s; }
 
+.earn-redeem-point.grid-design .service-list-wrap {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 16px; }
+  .earn-redeem-point.grid-design .service-list-wrap .service-item {
+    background: transparent;
+    padding: 10px 10px;
+    border: 1px solid #b8b8b8; }
+    .earn-redeem-point.grid-design .service-list-wrap .service-item .service-content {
+      padding-top: 10px; }
+      .earn-redeem-point.grid-design .service-list-wrap .service-item .service-content h2 a {
+        font-size: 18px;
+        font-weight: 500; }
+    .earn-redeem-point.grid-design .service-list-wrap .service-item .icon {
+      margin: 0; }
+
 .faq-top-section {
   background: url(../img/faq-100.jpg) no-repeat center, #f7fbff;
   background-size: cover;
@@ -3112,6 +3128,9 @@ blockquote {
 /*----------------------------------------*/
 /*  Responsive Css
 /*----------------------------------------*/
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .earn-redeem-point.grid-design .service-list-wrap {
+    grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 @media only screen and (max-width: 575px) {
   .sub-header .time-column {
     display: none; } }
@@ -3230,7 +3249,13 @@ blockquote {
   .carousel .carousel-item .carousel-caption .form-wrapper form .form-group .btn {
     position: initial;
     width: 100%;
-    margin-top: 12px; } }
+    margin-top: 12px; }
+
+  .earn-redeem-point.grid-design .service-list-wrap {
+    grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media only screen and (max-width: 575px) {
+  .earn-redeem-point.grid-design .service-list-wrap {
+    grid-template-columns: repeat(1, minmax(0, 1fr)); } }
 .download-btns {
   position: relative;
   z-index: 3; }
