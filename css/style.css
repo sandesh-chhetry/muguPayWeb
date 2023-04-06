@@ -542,11 +542,11 @@ header .appointment-btn {
     color: #ffffff;
     position: relative; }
     .mugupay-section .giftpay-list .primaryDiv .icon {
-      width: 40px;
-      height: 40px;
+      width: 70px;
+      height: 70px;
       display: block;
-      margin: 0 15px 0 0;
-      flex: 40px 0 0; }
+      margin: 0 15px 12px 0;
+      flex: 70px 0 0; }
       .mugupay-section .giftpay-list .primaryDiv .icon img {
         width: 100%;
         display: block;
@@ -564,6 +564,10 @@ header .appointment-btn {
         font-size: 18px;
         font-weight: 400;
         display: block; }
+    .mugupay-section .giftpay-list .primaryDiv h5 {
+      font-size: 20px;
+      color: #44106b;
+      font-weight: 700; }
   .mugupay-section .giftpay-list .r-wave:before {
     width: 15px;
     height: 15px;
@@ -578,9 +582,9 @@ header .appointment-btn {
   .mugupay-section .giftpay-list .secondaryDiv {
     background: transparent;
     color: #343a40;
-    box-shadow: 0px 0px 30px #f0e7ff;
     border-radius: 10px;
-    position: relative; }
+    position: relative;
+    flex-direction: column !important; }
     .mugupay-section .giftpay-list .secondaryDiv:before {
       width: 15px;
       height: 15px;
@@ -603,6 +607,9 @@ header .appointment-btn {
       margin: 0; }
     .mugupay-section .giftpay-list .secondaryDiv.no-border:after {
       display: none; }
+    @media only screen and (max-width: 767px) {
+      .mugupay-section .giftpay-list .secondaryDiv {
+        flex-direction: row !important; } }
 @media only screen and (max-width: 767px) {
   .mugupay-section {
     padding: 30px 0; }
@@ -1609,6 +1616,38 @@ blockquote {
     font-weight: normal;
     font-size: 16px; }
 
+.footer-logo {
+  height: 80px;
+  width: 100%;
+  display: block; }
+  .footer-logo img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    overflow: hidden;
+    filter: brightness(0) invert(1); }
+
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin-top: 16px; }
+  .social-link li a {
+    height: 36px;
+    width: 36px;
+    border-radius: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 24px;
+    text-decoration: none; }
+    .social-link li a i {
+      margin: 0; }
+
 .bottom-footer .list-group-item:hover {
   color: #ddd;
   padding-left: 10px;
@@ -1759,11 +1798,11 @@ blockquote {
 
 .earn-redeem-point.grid-design .service-list-wrap {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 16px; }
   .earn-redeem-point.grid-design .service-list-wrap .service-item {
     background: transparent;
-    padding: 10px 10px;
+    padding: 30px 30px;
     border: 1px solid #b8b8b8; }
     .earn-redeem-point.grid-design .service-list-wrap .service-item .service-content {
       padding-top: 10px; }

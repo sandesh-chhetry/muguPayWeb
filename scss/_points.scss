@@ -128,11 +128,11 @@
 .earn-redeem-point.grid-design {
     .service-list-wrap {
         display: grid;
-        grid-template-columns: repeat(5, minmax(0, 1fr));
+        grid-template-columns: repeat(4, minmax(0, 1fr));
         gap: 16px;
         .service-item {
             background: transparent;
-            padding: 10px 10px;
+            padding: 30px 30px;
             border: 1px solid #b8b8b8;
             .service-content {
                 padding-top: 10px;
