@@ -1581,8 +1581,8 @@ blockquote {
   margin-left: 10px;
   line-height: normal; }
   .foot-right-txt span {
-    font-size: 22px;
-    font-weight: 800; }
+    font-size: 20px;
+    font-weight: 600; }
 
 .bottom-footer {
   background-color: #343a40; }
@@ -1987,6 +1987,66 @@ blockquote {
     background: linear-gradient(0deg, #343a40, #ffffff00);
     bottom: 0;
     left: 0; }
+
+.how-helpful .icon-image {
+  height: 130px;
+  width: 130px;
+  margin: auto; }
+  .how-helpful .icon-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain; }
+  @media only screen and (max-width: 767px) {
+    .how-helpful .icon-image {
+      height: 100px;
+      width: 100px;
+      margin: 0; } }
+.how-helpful .count-num {
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d71b5f;
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: auto;
+  margin-bottom: 16px; }
+  @media only screen and (max-width: 767px) {
+    .how-helpful .count-num {
+      display: none; } }
+.how-helpful .content-title h6 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 24px; }
+  @media only screen and (max-width: 767px) {
+    .how-helpful .content-title h6 {
+      margin: 0; } }
+.how-helpful .help-list.arrow {
+  position: relative; }
+@media only screen and (max-width: 767px) {
+  .how-helpful .help-list {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 30px; } }
+.how-helpful .help-list.arrow::before {
+  content: '';
+  position: absolute;
+  background-image: url("../img/curve-arrow.svg");
+  top: 0;
+  left: 83%;
+  height: 90%;
+  margin-top: 5%;
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.8; }
+  @media only screen and (max-width: 767px) {
+    .how-helpful .help-list.arrow::before {
+      display: none; } }
 
 .small-screen {
   max-width: 500px;

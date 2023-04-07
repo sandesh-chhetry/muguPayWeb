@@ -1,0 +1,71 @@
+.how-helpful {
+    .icon-image {
+        height: 130px;
+        width: 130px;
+        margin: auto;
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
+        @media #{$large-mobile} {
+            height: 100px;
+            width: 100px;
+            margin: 0;
+        }
+    }
+    .count-num {
+        height: 50px;
+        width: 50px;
+        border-radius: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $primary;
+        font-size: 22px;
+        font-weight: 700;
+        color: $white;
+        margin: auto;
+        margin-bottom: 16px;
+        @media #{$large-mobile} {
+            display: none;
+        }
+    }
+    .content-title {
+        h6 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-top: 24px;
+            @media #{$large-mobile} {
+                margin: 0;
+            }
+        }
+    }
+    .help-list {
+        &.arrow {
+            position: relative;
+        }
+        @media #{$large-mobile} {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 30px;
+        }
+    }
+    .help-list.arrow::before {
+        content: '';
+        position: absolute;
+        background-image: url('../img/curve-arrow.svg');
+        top: 0;
+        left: 83%;
+        height: 90%;
+        margin-top: 5%;
+        width: 100%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        opacity: 0.8;
+        @media #{$large-mobile} {
+            display: none;
+        }
+    }
+}
