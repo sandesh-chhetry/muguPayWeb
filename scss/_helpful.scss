@@ -1,7 +1,7 @@
 .how-helpful {
     .icon-image {
-        height: 130px;
-        width: 130px;
+        height: 150px;
+        width: 150px;
         margin: auto;
         img {
             height: 100%;
@@ -21,10 +21,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: $secondary;
+        background-color: $white;
         font-size: 22px;
         font-weight: 700;
-        color: $white;
+        color: $secondary;
+        border: 2px solid $secondary;
         margin: auto;
         margin-bottom: 16px;
         @media #{$large-mobile} {

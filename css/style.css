@@ -1991,8 +1991,8 @@ blockquote {
     left: 0; }
 
 .how-helpful .icon-image {
-  height: 130px;
-  width: 130px;
+  height: 150px;
+  width: 150px;
   margin: auto; }
   .how-helpful .icon-image img {
     height: 100%;
@@ -2010,10 +2010,11 @@ blockquote {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #44106b;
+  background-color: #ffffff;
   font-size: 22px;
   font-weight: 700;
-  color: #ffffff;
+  color: #44106b;
+  border: 2px solid #44106b;
   margin: auto;
   margin-bottom: 16px; }
   @media only screen and (max-width: 767px) {
