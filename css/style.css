@@ -1558,7 +1558,7 @@ blockquote {
 /*Footer CSS*/
 .top-footer {
   background-color: #d71b5f;
-  padding: 20px 0px; }
+  padding: 40px 0px; }
 
 .foot-left-txt {
   font-size: 22px;
@@ -1583,6 +1583,9 @@ blockquote {
   .foot-right-txt span {
     font-size: 20px;
     font-weight: 600; }
+    @media only screen and (max-width: 767px) {
+      .foot-right-txt span {
+        font-size: 18px; } }
 
 .bottom-footer {
   background-color: #343a40; }
@@ -1801,9 +1804,8 @@ blockquote {
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 16px; }
   .earn-redeem-point.grid-design .service-list-wrap .service-item {
-    background: transparent;
-    padding: 30px 30px;
-    border: 1px solid #b8b8b8; }
+    background: #ffffff;
+    padding: 30px 30px; }
     .earn-redeem-point.grid-design .service-list-wrap .service-item .service-content {
       padding-top: 10px; }
       .earn-redeem-point.grid-design .service-list-wrap .service-item .service-content h2 a {
@@ -1998,8 +2000,8 @@ blockquote {
     object-fit: contain; }
   @media only screen and (max-width: 767px) {
     .how-helpful .icon-image {
-      height: 100px;
-      width: 100px;
+      height: 80px;
+      width: 80px;
       margin: 0; } }
 .how-helpful .count-num {
   height: 50px;
@@ -2037,8 +2039,8 @@ blockquote {
   position: absolute;
   background-image: url("../img/curve-arrow.svg");
   top: 0;
-  left: 83%;
-  height: 90%;
+  left: 80%;
+  height: 80%;
   margin-top: 5%;
   width: 100%;
   background-size: contain;

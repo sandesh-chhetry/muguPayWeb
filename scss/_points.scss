@@ -131,9 +131,9 @@
         grid-template-columns: repeat(4, minmax(0, 1fr));
         gap: 16px;
         .service-item {
-            background: transparent;
+            background: $white;
             padding: 30px 30px;
-            border: 1px solid #b8b8b8;
+            // border: 1px solid #b8b8b8;
             .service-content {
                 padding-top: 10px;
                 h2 {
