@@ -18,7 +18,7 @@
     // margin-top: 30px;
     .service-item {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         flex-direction: column;
         // border-bottom: 1px solid darken($white, 10%);
         padding: 40px 40px;
@@ -49,11 +49,11 @@
                 font-size: 20px;
                 line-height: 25px;
                 text-align: center;
-                padding-top: 16px;
+                padding-top: 4px;
                 a {
                     text-decoration: none;
                     color: $dark;
-                    font-size: 20px;
+                    font-size: 18px;
                     line-height: 25px;
                     display: block;
                     text-align: center;

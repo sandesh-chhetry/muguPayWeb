@@ -13,7 +13,7 @@ header {
         // border-bottom: 1px solid #ccc;
         .navbar-brand {
             display: flex;
-            width: 85px;
+            width: 185px;
             align-items: center;
             line-height: 22px;
             font-weight: 800;
@@ -36,9 +36,9 @@ header {
         .navbar-nav {
             .nav-item {
                 .nav-link {
-                    padding: 1.3rem 1rem;
-                    font-weight: 400;
-                    color: $white;
+                    padding: 1.3rem 1.1rem;
+                    font-weight: 600;
+                    color: $dark;
                     &:before {
                         content: ""
                     }
@@ -76,7 +76,7 @@ header {
             background-color: $secondary;
           }
           a{
-            color: $secondary !important;
+            color: $dark !important;
             font-weight: 500 !important;
             &:hover{
                 color: $primary !important;
@@ -105,8 +105,9 @@ header {
         }
         a {
             text-decoration: none;
-            color: $white;
+            color: $secondary;
             padding: 0 15px;
+            font-weight: 700;
             &:hover {
                 color: $primary;
             }

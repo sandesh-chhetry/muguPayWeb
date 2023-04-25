@@ -5,13 +5,8 @@
 /*----------------------------------------*/
 
 .hero-section {
-    padding: 0;
-    background: $secondary;
-    background: linear-gradient(24deg, $secondary 57%, rgba(215, 27, 95, 1) 150%);
-    @media #{$large-mobile} {
-        background: none;
-    }
-    border-bottom-right-radius: 350px;
+     background: $lightsecondary;
+     
 }
 
 .carousel {
@@ -41,19 +36,23 @@
                 font-size: 1.3rem;
                 // color: $s/econdary;
                 font-weight: 400;
-                color: $white;
+                color: $secondary;
             }
             h5 {
-                font-size: 25px;
-                font-weight: 300;
-                line-height: 55px;
-                color: $white;
+                    font-size: 22px;
+                    font-weight: 500;
+                color: $dark;
                 span {
-                    font-size: 62px;
-                    font-weight: 700;
-                    display: inline-block !important;
-                    color: $white;
-                    line-height: 68px;
+                    background: linear-gradient(to right, $secondary 4%, $primary 94%);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        font-size: 55px;
+                        font-weight: 800;
+                        display: inline-block !important;
+                        color: #580fb8;
+                        line-height: 65px;
+                        z-index: 9;
+                        position: relative;
                     // background: linear-gradient(45deg, #652d90, $primary);
                     // -webkit-background-clip: text;
                     // -webkit-text-fill-color: transparent;
@@ -67,9 +66,9 @@
             }
             p {
                 font-size: 16px;
-                font-weight: 300;
+                font-weight: 400;
                 a {
-                    color: $white;
+                    color: $primary;
                     text-decoration: underline;
                 }
             }
@@ -114,7 +113,7 @@
                 .caption-content {
                     .slider-list {
                         li {
-                            font-size: 14px;
+                            font-size: 16px;
                             &:before {
                                 margin-right: 5px;
                             }
@@ -124,7 +123,7 @@
                 .btn-wrapper {
                     margin-top: 15px;
                     .btn {
-                        font-size: 14px;
+                        font-size: 16px;
                         padding: 5px 10px;
                     }
                 }
@@ -149,21 +148,24 @@
             height: 405px;
         }
         .hero-image {
-            max-width: 520px;
+          width: 700px;
             text-align: center;
-            margin: auto;
+            border-radius: 20px;
+            overflow: hidden;
+                margin: auto;
+                    margin-right:0;
         }
     }
     &::before {
         content: "";
-        position: absolute;
-        height: 200px;
-        width: 80%;
-        bottom: -48px;
-        left: 0;
-        background: $secondary;
-        transform: skew(0, -5deg);
-        z-index: -1;
+        // position: absolute;
+        // height: 200px;
+        // width: 80%;
+        // bottom: -48px;
+        // left: 0;
+        // background: $secondary;
+        // transform: skew(0, -5deg);
+        // z-index: -1;
     }
     &::after {
         //     height: 470px;
@@ -192,15 +194,15 @@
         overflow: hidden;
         padding: 50px 0;
         &:before {
-            height: 470px;
-            width: 1630px;
-            background: $secondary;
-            background: linear-gradient(24deg, $secondary 57%, rgba(215, 27, 96, 0.423) 100%);
-            position: absolute;
-            content: "";
-            bottom: -150px;
-            left: -620px;
-            transform: rotate(25deg);
+            // height: 470px;
+            // width: 1630px;
+            // background: $secondary;
+            // background: linear-gradient(24deg, $secondary 57%, rgba(215, 27, 96, 0.423) 100%);
+            // position: absolute;
+            // content: "";
+            // bottom: -150px;
+            // left: -620px;
+            // transform: rotate(25deg);
         }
     }
     // div[ class*="carousel-control-"] {
@@ -228,6 +230,7 @@
     bottom: 5px;
     height: 50px;
     padding: 0 30px;
+    border: none;
 }
 
 @media #{$large-mobile} {
