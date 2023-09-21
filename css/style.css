@@ -2663,7 +2663,7 @@ blockquote {
   .qr-code-section .qr-code-wrap {
     padding: 50px 0px !important; }
     .qr-code-section .qr-code-wrap .pay-logo {
-      height: 80px;
+      height: 48px;
       width: auto; }
       .qr-code-section .qr-code-wrap .pay-logo img {
         height: 100%;
