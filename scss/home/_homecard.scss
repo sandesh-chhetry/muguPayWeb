@@ -187,9 +187,10 @@
                 min-width: 100% !important;
                 gap: 10px;
                 margin-bottom: 26px !important;
+                flex-direction: row;
                 .nav-item {
                     // min-width: 50px;
-                    margin-bottom: 12px;
+                    // margin-bottom: 12px;
                     // min-width: 33%;
                     .nav-link {
                         white-space: nowrap;
